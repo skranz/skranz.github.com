@@ -1,3 +1,6 @@
-name: Flex
+name: Economics and R
+description: Economics and R
+url: http://skranz.github.io/
+
 markdown: redcarpet
 pygments: true
