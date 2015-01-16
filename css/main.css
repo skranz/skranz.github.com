@@ -6,7 +6,9 @@
 
 * {
   margin: 0;
+/*
   padding: 0;
+*/
 }
 
 html, body {
@@ -79,7 +81,9 @@ a:hover {
   height: 100%;
   width: 100%;
   line-height: 1.25em;
-}
+
+  overflow-y: auto;
+ }
 
 .title {
   display: inline-block;
@@ -101,6 +105,7 @@ a:hover {
   margin-top: 1em;
   padding-top: 1.5em;
   padding-bottom: 1.25em;
+
 }
 
 .footer {
@@ -149,6 +154,7 @@ a:hover {
   line-height: 24px;
   max-width: 725px;
   clear: both;
+
 }
 
 .post h2 {
@@ -167,11 +173,13 @@ a:hover {
 }
 
 /* standard */
+/*
 .post pre {
   border: 1px solid #ddd;
-  background-color: #eef;
+  background-color: #eee;
   padding: 0 .4em;
 }
+*/
 
 .post p {
   font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -185,25 +193,54 @@ a:hover {
   margin-bottom: 1.25em;
 }
 
+/*
 .post code {
   border: 1px solid #ddd;
-  background-color: #eef;
+  font-size: 0.85em;
+  font-weight: bold;
+  background-color: #eee;
   padding: 0 .2em;
 }
 
 .post pre code {
   border: none;
 }
+*/
+
+.post pre {
+  border: 1px solid #ddd;
+  background-color: #F2F8FC;
+  font-size: 13px;
+  padding: 0 .4em;
+}
+
+.post pre code {
+  margin-bottom: 30px;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  /*font-size: 14px;*/
+  border: none;
+  color: #222;
+  background-color: #F2F8FC;
+  /*font-weight: bold;*/
+}
+
+.post code {
+  padding: 0 3px;
+  background-color: #F2F8FC;
+  border: solid 1px #dbe7f3;
+}
+
 
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;
-  background-color: #333;
+  background-color: #F2F8FC;
   color: #FFF;
 }
 
 .post pre.terminal code {
-  background-color: #333;
+  background-color: #F2F8FC;
+  border: none;
 }
 
 /*****************************************************************************/
@@ -216,15 +253,20 @@ a:hover {
 .content {
   vertical-align: top;
   height: 100%;
+ /*
+
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
+    overflow-y: hidden;
+ */ 
+
   overflow-x: hidden;
 }
 
 .sidebar {
   float: left;
-  width: 14%;
-  padding-left: 11em;
+  width: 20%;
+  padding-left: 3em;
   padding-right: 2.125em;
   border-right: 1px solid #e7e7e7;
 }
@@ -288,4 +330,19 @@ a:hover {
   margin-top: 1.25em;
   font-size: 0.95em;
   color: #777;
+}
+
+
+/*  Headers */
+h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+h2 {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+h3 {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
