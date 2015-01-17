@@ -243,6 +243,17 @@ a:hover {
   border: none;
 }
 
+
+.mainbar {
+  float: left;
+  width: 75%;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-right: 1px solid #e7e7e7;
+  overflow-y: hidden;
+}
+
+
 /*****************************************************************************/
 /*
 /* Sidebar and Content
@@ -263,6 +274,7 @@ a:hover {
   overflow-x: hidden;
 }
 
+/*
 .sidebar {
   float: left;
   width: 20%;
@@ -270,6 +282,17 @@ a:hover {
   padding-right: 2.125em;
   border-right: 1px solid #e7e7e7;
 }
+*/
+
+
+.sidebar {
+  float: right;
+  width: 15%;
+  padding-left: 0em;
+  padding-right: 0em;
+  overflow-y: hidden;
+}
+
 
 .content {
   padding-left: 2.125em;
