@@ -2,6 +2,5 @@ name: Economics and R
 description: Economics and R
 url: http://skranz.github.io/
 
-highlighter: rouge
-# markdown: redcarpet
-# pygments: true
+markdown: redcarpet
+pygments: true
