@@ -2,7 +2,7 @@
 layout: post
 title: Debugging with restore points instead of break points
 cover: cover.jpg
-date:   2015-01-14 12:00:00
+date:   2015-02-15 20:00:00
 categories: r
 tags: [R,restorepoint]
 ---
