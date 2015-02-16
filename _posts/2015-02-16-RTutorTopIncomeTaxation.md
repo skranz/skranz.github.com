@@ -40,7 +40,7 @@ and read the vignette
 
 The core of a problem set is an RMarkdown solution file that is augmented by specific syntax to include customized tests, hints or info boxes. I try to make RTutor generate sensible tests and useful hints automatically. Yet, customization often improves a problem set. For a comprehensive example, take a look at Jonas' solution file for the problem set on Top Income Taxation:
 
-[Optimal_Taxation_of_Top_Labor_Incomes_sol.Rmd](https://raw.githubusercontent.com/skranz/RTutorTopIncomeTaxation/master/inst/ps/Optimal%20Taxation%20of%20Top%20Labor%20Incomes_sol.Rmd)
+[Optimal Taxation of Top Labor Incomes sol.Rmd](https://raw.githubusercontent.com/skranz/RTutorTopIncomeTaxation/master/inst/ps/Optimal%20Taxation%20of%20Top%20Labor%20Incomes_sol.Rmd)
 
 ## Using RTutor for courses
 
