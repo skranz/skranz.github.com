@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'RTutor Kicks Off: An Interactive R Problem Set about Top Income Taxation'
-cover: 
+cover: http://skranz.github.io/images/cover.jpg
 date:   2015-02-16 12:00:00
 categories: r
 tags: [R,RTutor, shiny]
@@ -15,11 +15,11 @@ Jonas Send has written a very nice interactive R problem set that allows you to 
 
 To install and try it out locally, follow the instructions here:
 
-https://github.com/skranz/RTutorTopIncomeTaxation
+[https://github.com/skranz/RTutorTopIncomeTaxation](https://github.com/skranz/RTutorTopIncomeTaxation)
 
 Currently there is also an online version hosted by shinyapps.io:
 
-https://skranz.shinyapps.io/RTutorTopIncomeTaxation/
+[https://skranz.shinyapps.io/RTutorTopIncomeTaxation/](https://skranz.shinyapps.io/RTutorTopIncomeTaxation/)
 
 (The online version sometimes greys out. On my computer it runs more stable with Chrome than with Firefox. The link for the online version may change in the future. Check out the github page if the link does not work anymore.)
 
@@ -31,15 +31,16 @@ https://skranz.shinyapps.io/RTutorTopIncomeTaxation/
 
 If you want to build your own problem set, take a look at the RTutor github page
 
-https://github.com/skranz/RTutor
+
+[https://github.com/skranz/RTutor](https://github.com/skranz/RTutor)
 
 and read the vignette
 
-https://github.com/skranz/RTutor/blob/master/vignettes/Guide_for_Developing_Interactive_R_Problemsets.md
+[Guide_for_Developing_Interactive_R_Problemsets.md](https://github.com/skranz/RTutor/blob/master/vignettes/Guide_for_Developing_Interactive_R_Problemsets.md)
 
 The core of a problem set is an RMarkdown solution file that is augmented by specific syntax to include customized tests, hints or info boxes. I try to make RTutor generate sensible tests and useful hints automatically. Yet, customization often improves a problem set. For a comprehensive example, take a look at Jonas' solution file for the problem set on Top Income Taxation:
 
-https://raw.githubusercontent.com/skranz/RTutorTopIncomeTaxation/master/inst/ps/Optimal%20Taxation%20of%20Top%20Labor%20Incomes_sol.Rmd
+[Optimal_Taxation_of_Top_Labor_Incomes_sol.Rmd](https://raw.githubusercontent.com/skranz/RTutorTopIncomeTaxation/master/inst/ps/Optimal%20Taxation%20of%20Top%20Labor%20Incomes_sol.Rmd)
 
 ## Using RTutor for courses
 
@@ -49,6 +50,6 @@ I plan to regularly use RTutor for some of my courses at Ulm University. In addi
 
 RTutor is still a very young project and I appreciate your feedback. If you have ideas for nice features or find some bug, just open an issue on the project's github page:
 
-https://github.com/skranz/RTutor/issues
+[https://github.com/skranz/RTutor/issues](https://github.com/skranz/RTutor/issues)
 
 
