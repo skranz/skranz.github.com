@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'RTutor Kicks Off: An Interactive R Problem Set about Top Income Taxation'
-cover: http://skranz.github.io/images/cover.jpg
+cover: 
 date:   2015-02-16 12:00:00
 categories: r
 tags: [R,RTutor, shiny]
