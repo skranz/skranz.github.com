@@ -36,7 +36,7 @@ If you want to build your own problem set, take a look at the RTutor github page
 
 and read the vignette
 
-[Guide_for_Developing_Interactive_R_Problemsets.md](https://github.com/skranz/RTutor/blob/master/vignettes/Guide_for_Developing_Interactive_R_Problemsets.md)
+[Guide for Developing Interactive R Problemsets.md](https://github.com/skranz/RTutor/blob/master/vignettes/Guide_for_Developing_Interactive_R_Problemsets.md)
 
 The core of a problem set is an RMarkdown solution file that is augmented by specific syntax to include customized tests, hints or info boxes. I try to make RTutor generate sensible tests and useful hints automatically. Yet, customization often improves a problem set. For a comprehensive example, take a look at Jonas' solution file for the problem set on Top Income Taxation:
 
