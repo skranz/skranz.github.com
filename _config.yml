@@ -3,4 +3,4 @@ description: Economics and R
 url: http://skranz.github.io/
 
 markdown: redcarpet
-pygments: true
+highlighter: rouge
