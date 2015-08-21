@@ -19,7 +19,7 @@ The regression analysis starts with Exercise 4. Subsequently you can explore  ma
 
 The panel data analysis in the problem set extensively uses the R package [lfe](https://cran.r-project.org/web/packages/lfe/index.html). In my view `lfe` is quite a nice package, that allows to quickly run multiway fixed effect regressions on considerably large data sets. In addition, many functionality that empirical economists commonly use, like instrumental variables or clustered robust standard errors can be very conveniently accessed. For economists that currently use Stata but are thinking of moving to R, the `lfe` package may be removing some considerable obstacles. You can check it out in Clara's problem set. 
 
-Here is screenshot:
+Here is a screenshot:
 <hr>
 
 ![Screenshot missing](http://skranz.github.io/images/RTutorSoapOperas.PNG)
