@@ -3,5 +3,8 @@ description: Economics and R
 url: http://skranz.github.io/
 
 markdown: redcarpet
+# Use the line below to compile on github.io
 pygments: true
+
+# Use the line below to complie locally
 #highlighter: rouge
