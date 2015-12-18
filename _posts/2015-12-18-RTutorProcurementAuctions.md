@@ -2,7 +2,7 @@
 layout: post
 title: 'RTutor: Public Procurement Auctions: Design, Outcomes and Adaption Costs'
 cover: 
-date:   2015-12-18 14:00:00
+date:   2015-12-18 12:00:00
 categories: r
 tags: [R,RTutor, shiny]
 ---
@@ -16,7 +16,7 @@ Frederik Collin has created a very nice interactive RTutor problem set that allo
 
 The article and problem set is based on an awesome data set that contains engineer estimates, detailed itemized bids, background data on bidders, and information of ex-post adjustments and compensations of all Californian highway procurement auctions for several years. 
 
-In the interactive problem set, you first learn, with a selected example auction, details about the auction design that uses engineer estimates and itemized bids. You then examine bidding behavior, e.g. how markups across auctions depend on firm characteristics and competitive pressure. You also study in how far firms systematically `skew` their bids to exploit systematic mistakes in official engineer estimates. Finally, the data on ex-post changes and negotiated compensations is studied. It is estimated that, possibly due to high transaction and haggling costs, firms anticipate ex-post adaptions to be  considerably more costly as what they are compensated for. 
+In the interactive problem set, you first learn, with a selected example auction, details about the auction design that uses engineer estimates and itemized bids. You then examine bidding behavior, e.g. how markups across auctions depend on firm characteristics and competitive pressure. You also study in how far firms systematically `skew` their bids to exploit systematic mistakes in official engineer estimates. Finally, the data on ex-post changes and negotiated compensations is studied. It is estimated that, possibly due to high transaction and haggling costs, firms anticipate ex-post adaptions to be  considerably more costly than what they are compensated for. 
 
 
 The problem set incorporates some novel RTutor features, such as quizes and output of data frames as html tables by default...
