@@ -2,7 +2,7 @@
 layout: post
 title: 'RTutor: Technological Progress and Fuel Economy of Cars'
 cover: 
-date:   2016-04-15 14:00:00
+date: 2016-04-15 14:00:00
 categories: r
 tags: [R,RTutor, shiny]
 ---
