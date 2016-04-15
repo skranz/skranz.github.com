@@ -2,6 +2,7 @@ name: Economics and R
 description: Economics and R
 url: http://skranz.github.io/
 
+future: true
 markdown: kramdown
 # Use the line below to compile on github.io
 #pygments: true

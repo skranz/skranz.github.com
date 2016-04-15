@@ -2,12 +2,11 @@
 layout: post
 title: 'RTutor: Technological Progress and Fuel Economy of Cars'
 cover: 
-date: 2016-04-15 14:00:00
+date: 2016-04-15 12:00:00
 categories: r
 tags: [R,RTutor, shiny]
 ---
  
-
 Christopher Knittel estimates in his article
 
 [Automobiles on Steroids: Product Attribute Trade-Offs and Technological Progress in the Automobile Sector (American Economic Review, 2011)](https://www.aeaweb.org/articles?id=10.1257/aer.101.7.3368)
@@ -19,7 +18,7 @@ Like previous RTutor problem sets, you can enter free R code in a web based shin
 
 Here is a screenshoot:
 <hr>
-![Screenshot missing](./images/cars.PNG)
+![Screenshot missing](http://skranz.github.io/images/cars.PNG)
 <hr>
 
 To install the problem set locally, follow the instructions here:
