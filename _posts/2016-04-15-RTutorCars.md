@@ -18,7 +18,7 @@ Like previous RTutor problem sets, you can enter free R code in a web based shin
 
 Here is a screenshoot:
 <hr>
-![Screenshot missing](http://skranz.github.io/images/cars.PNG)
+![Screenshot missing](http://skranz.github.io/images/Cars.PNG)
 <hr>
 
 To install the problem set locally, follow the instructions here:
