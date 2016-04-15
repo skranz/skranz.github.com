@@ -4,7 +4,7 @@ url: http://skranz.github.io/
 
 markdown: kramdown
 # Use the line below to compile on github.io
-pygments: true
+#pygments: true
 
 # Use the line below to complie locally
-#highlighter: rouge
+highlighter: rouge
