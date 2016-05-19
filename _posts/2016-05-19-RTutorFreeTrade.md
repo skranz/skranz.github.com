@@ -2,13 +2,14 @@
 layout: post
 title: 'RTutor: Free Trade Agreements'
 cover: 
-date: 2016-05-19 06:00:00
+date: 2016-05-19 08:00:00
 categories: r
 tags: [R,RTutor, shiny]
 ---
  
 
-There is quite some sceptisim towards TTIP, the currently negotiated free trade agreement between the EU and the USA. Even in an exporting nation like Germany, there are substantial worries about reduction in consumer protection standards, or fear of limits to democracy if cooperations can sue states in international settlement courts. On the other hand, most economists tend to be positive towards free trade in general and stress the benefits from more effective exchange of goods and services. But how large are these possible beneficial impacts of a free trade agreement and how can we estimate them?  
+
+There is quite some sceptisim towards TTIP, the currently negotiated free trade agreement between Europe and the USA. Even in an exporting nation like Germany, there are substantial worries about reduction in consumer protection standards, or fear of limits to democracy if cooperations can sue states in international settlement courts. On the other hand, most economists tend to be positive towards free trade in general and stress the benefits from more effective exchange of goods and services. But how large are these possible beneficial impacts of a free trade agreement and how can we estimate them?  
 
 Tobias Fischer has created a very nice interactive RTutor problem set concerning these issues. You will first be introduced to a nice international trade data set. Besides tarif and trade data, it contains sector specific input-output tables, which allow to account for intermediate production. The problem set then presents a modern Ricardian trade model and discusses how it is calibrated. The model is used to predict the welfare effects of the tariff reductions from the North American Free Trade Agreement NAFTA.
 
