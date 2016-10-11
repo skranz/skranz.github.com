@@ -15,7 +15,7 @@ As part of his Master Thesis at Ulm University, Moritz Sporer has created an int
 
 Screenshoot:
 <hr>
-![Screenshot missing](./images/AirPollutionOLS.PNG)
+![Screenshot missing](http://skranz.github.io/images/AirPollutionOLS.PNG)
 <hr>
 
 Like in previous RTutor problem sets, you can enter free R code in a web based shiny app. The code will be automatically checked and you can get hints how to procceed. 
