@@ -18,7 +18,7 @@ As part of his Master's Thesis at Ulm University, Benjamin Lux has generated a v
 
 Screenshoot:
 <hr>
-![Screenshot missing]((http://skranz.github.io/images/VS_Score.PNG)
+![Screenshot missing](http://skranz.github.io/images/VS_Score.PNG)
 <hr>
 
 Like in previous RTutor problem sets, you can enter free R code in a web based shiny app. The code will be automatically checked and you can get hints how to procceed. In addition you are challenged by very well designed quizzes.
