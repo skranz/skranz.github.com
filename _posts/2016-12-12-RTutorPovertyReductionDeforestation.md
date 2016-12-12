@@ -32,7 +32,7 @@ The last exercise will sum up the results, draw conclusions from them and give a
 (I must admit, that in this blog I don't adhere to standards of scientific writing and have simply copied large parts of the description above from the outline of the problemset.)
 
 Here is screenshoot:
-![Screenshot missing]((http://skranz.github.io/images/Mexico.PNG)
+![Screenshot missing](http://skranz.github.io/images/Mexico.PNG)
 <hr>
 
 Like in previous RTutor problem sets, you can enter free R code in a web based shiny app. The code will be automatically checked and you can get hints how to procceed. In addition you are challenged by very well designed quizzes.
