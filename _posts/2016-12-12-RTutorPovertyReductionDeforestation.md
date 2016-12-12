@@ -2,7 +2,7 @@
 layout: post
 title: 'RTutor: Poverty Reduction and Deforestation'
 cover: 
-date:   2016-12-12 8:00:00
+date: 2016-12-12 8:00:00
 categories: r
 tags: [R,RTutor, shiny]
 ---
