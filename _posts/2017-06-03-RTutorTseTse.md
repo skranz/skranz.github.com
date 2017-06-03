@@ -7,7 +7,7 @@ categories: r
 tags: [R,RTutor, shiny]
 ---
 
-What is the causal impact of the TseTse fly on historical and current development in Africa? Marcella Alsan studies this question in her facinating article ['The effect of the TseTse fly on African development'](https://www.aeaweb.org/articles?id=10.1257/aer.20130604) in the *American Economic Review*, 2015. 
+What is the causal impact of the TseTse fly on historical and current development in Africa? Marcella Alsan studies this question in her fascinating article ['The effect of the TseTse fly on African development'](https://www.aeaweb.org/articles?id=10.1257/aer.20130604) in the *American Economic Review*, 2015. 
 
 As part of her Bachelor Thesis at Ulm University, Vanessa Schöller has generated a very nice RTutor problem set  that allows you to replicate the main insights of the paper in an interactive fashion.
 
