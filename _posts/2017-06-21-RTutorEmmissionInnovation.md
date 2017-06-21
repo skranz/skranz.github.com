@@ -1,19 +1,19 @@
 ---
 layout: post
-title: 'RTutor: Emmision Certificates and Green Innovation'
+title: 'RTutor: Emission Certificates and Green Innovation'
 cover: 
 date: 2017-06-27 12:00:00
 categories: r
 tags: [R,RTutor, shiny]
 ---
 
-Which policy instruments should we use to cost-effectively reduce greenhouse gas emissions? For a given technological level there are many economic arguments in favour of tradeable emmission certificates or a carbon tax: they generate static efficiency by inducing emmission reductions in those sectors and for those technologies where it is most cost effective.
+Which policy instruments should we use to cost-effectively reduce greenhouse gas emissions? For a given technological level there are many economic arguments in favour of tradeable emission certificates or a carbon tax: they generate static efficiency by inducing emission reductions in those sectors and for those technologies where it is most cost effective.
 
 Specialized subsidies, like the originally extremely high subsidies on solar energy in Germany and other countries are often much more costly. Yet, we have seen a tremendous cost reduction for photovoltaics, which may have not been achieved on such a scale without those subsidies. And maybe in a world, where the current president of a major polluting country seems not to care much about the risks of climate change, the development of cheap green technology that even absent goverment support can cost-effectively substitute fossil fuels, is the most decisive factor to fight climate change.
 
-Yet, the impact of different policy measures on innovation of green technology is very hard to assess. Are focused subsidies or mandates the best way, or can also emmission trading or carbon taxes considerably boost innovation of green technologies? That is a tough quantitative question, but we can try to get at least some evidence.
+Yet, the impact of different policy measures on innovation of green technology is very hard to assess. Are focused subsidies or mandates the best way, or can also emission trading or carbon taxes considerably boost innovation of green technologies? That is a tough quantitative question, but we can try to get at least some evidence.
 
-In their article  [Environmental Policy and Directed Technological Change: Evidence from the European carbon market](http://www.mitpressjournals.org/doi/abs/10.1162/REST_a_00470), Review of Economic and Statistics (2016), Raphael Calel and Antoine Dechezlepretre study the impact of the EU carbon emmission trading system on patent activities of the regulated firms. By matching them with unregulated firms, they estimate that the emmission trading has increased the innovation activities for low carbon technologies of the regulated firms by 10%.
+In their article  [Environmental Policy and Directed Technological Change: Evidence from the European carbon market](http://www.mitpressjournals.org/doi/abs/10.1162/REST_a_00470), Review of Economic and Statistics (2016), Raphael Calel and Antoine Dechezlepretre study the impact of the EU carbon emission trading system on patent activities of the regulated firms. By matching them with unregulated firms, they estimate that the emission trading has increased the innovation activities for low carbon technologies of the regulated firms by 10%.
 
 As part of his Master Thesis at Ulm University, Arthur Schäfer has generated an RTutor problem set  that allows you to replicate the main insights of the paper in an interactive fashion.
 
