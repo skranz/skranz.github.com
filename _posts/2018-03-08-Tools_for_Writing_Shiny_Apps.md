@@ -1,0 +1,55 @@
+---
+layout: post
+title: 'Some Tools for Writing Shiny Apps'
+cover: 
+date: 2018-03-08 9:00:00
+categories: r
+tags: [R, shiny]
+---  
+
+
+Recently, I have written and hosted several multi-user Shiny apps. One example, is <a href="http://taddle.mathematik.uni-ulm.de">Taddle</a> that runs on my server at <a href="http://taddle.mathematik.uni-ulm.de">http://taddle.mathematik.uni-ulm.de</a>. Taddle is a multi-user shiny app that offers a free and simple way to allocate seminar topics. (Next time you need to assign seminar topics, why not have a look at Taddle?)
+
+I just wanted to briefly give a list of tools that I found very helpful to write and host those apps.
+
+<ol>
+<li> <a href="https://www.docker.com/">Docker</a>: I run all my shiny apps in separate docker containers. If you search the web, you find several nice blog posts (e.g. <a href="https://www.r-bloggers.com/dockerizing-a-shiny-app/">https://www.r-bloggers.com/dockerizing-a-shiny-app/</a>) that explain how to do it.
+
+  One of many great advantages of Docker containers is that you can update packages or Linux libraries for one app without risking that the update breaks another app that is running in a different container on your server.
+  
+  Being not a Linux expert, I also find it very convenient that Docker allows me to experiment with different Linux settings and programs in a way that entails much lower risk than if I would install the programs directly on my server.
+  
+  You can also easily start and stop specific apps and host them on different ports on  your server. 
+  
+  Even though it took me some time to get started with Docker the benefits were huge.
+  
+
+  Of course Docker is mainly useful if you host the shiny apps on your own server or rented linux machine. A simpler alternative is to use a dedicated hosting service for shiny apps like RStudio's <a href="http://www.shinyapps.io/">shinyapps.io</a>.
+<br></li>
+
+<li><a href="https://www.rstudio.com/products/rstudio/#Server">RStudio Server</a>: Sometimes my app works nicely on my Windows notebook where I develop it, but some error arises when I put it on the server (e.g. some necessary Linux library is not installed). <a href="https://www.rstudio.com/products/rstudio/#Server">RStudio Server</a> is a great way to debug your app via a web browser directly on your server. Thus, for testing purposes I typically use a Docker container that has RStudio server already installed and add Shiny server as described here: <a = href="https://hub.docker.com/r/rocker/rstudio/">https://hub.docker.com/r/rocker/rstudio/</a>. If the app then runs in production, one can base it on a container without RStudio server, or simply turn-off access to RStudio by disabling its port.  
+<br></li>
+
+<li><a href="https://github.com/skranz/restorepoint">restorepoint</a>: I personally debug my shiny apps and other packages using my package <a href="https://github.com/skranz/restorepoint">restorepoint</a>. This means that I start most functions with a line like `restore.point("function_name")`. This allows me to easily find and correct errors post-mortem after the shiny app has stopped. Setting the option `restore.point.options(display.restore.point=TRUE)` also helps to locate the function in which the error has taken place.
+Like all my packages, you need to install `restorepoint` directly from Github. When you run your app in production just put the line `set.storing(FALSE)` to remove the speed reduction that restore points otherwise entail.
+<br></li>
+
+<li>Learn and use HTML, CSS, javascript and jQuery: When I wrote my first Shiny apps, I knew R already quite well, but virtually knew nothing about web programming essentials like javascript, jQuery, CSS or even basic HTML syntax. This means I implemented almost everything on the server side with R code that used the standard shiny widgets. One can do a lot with pure R code, but sometimes it is really better not to use it as a hammer for everything.
+
+For example, if you decide in Taddle that students shall rank all seminar topics, they will see the following HTML table:
+
+<img src="http://skranz.github.io/images/taddle_rank.PNG">
+
+Students can rank their topics via the buttons in each row or by the keyboard up and down keys. While you probably could create and modify such a table using Shiny widgets only, I found it much more convenient to genereate it with direct HTML code and write the button and keyboard handlers directly in javascript.
+<br></li>
+
+<li><a href="https://github.com/skranz/shinyEvents">shinyEvents</a>: As a subjective matter of taste, I like tradional event-based programming more than the reactive programming framework of Shiny. My R package <a href="https://github.com/skranz/shinyEvents">shinyEvents</a> allows to write Shiny apps using an event-driven programming style.
+
+It is quite simple to define on the R side custom events that correspond to arbitrary jQuery events which can be quite useful for custom UI generated by arbitrary HTML code.
+
+You can also combine shinyEvents with the traditional features and reactive programming paradigm of Shiny. It is essentially just a wrapper with several helper functions, to facilitate an event-based approach.
+
+Take a look at the <a href="https://github.com/skranz/shinyEvents/blob/master/README.md">README.md</a> on Github for some examples.  
+<br></li>
+
+</ol> 
