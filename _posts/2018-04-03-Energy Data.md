@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Data on energy consumption and CO2 emmissions'
+title: 'Data on energy consumption and CO2 emissions'
 cover: 
 date: 2018-04-03 9:00:00
 categories: r
@@ -6689,7 +6689,7 @@ You can find some more visualizations of energy and enviornmental data here:
 Alternatively, if you want to learn about diverse economic data in quiz form, you can take a look at my data quiz: [http://skranz.github.io//r/2017/10/23/Dataquiz.html](http://skranz.github.io//r/2017/10/23/Dataquiz.html)
 
 
-But let me show you one more visualization that allows you to compare CO2 emmissions and total energy usage for different world regions:
+But let me show you one more visualization that allows you to compare CO2 emissions and total energy usage for different world regions:
 
 
 <!-- MotionChart generated in R 3.3.2 by googleVis 0.6.2 package -->
@@ -11228,19 +11228,19 @@ callbacks.shift()();
 
 - World wide CO2 emissions are steadily increasing even though growth has flatten from 2013 onwards. While there has been a small reduction in OECD countries, there has been substantial growth from Non-OECD countries.
 
-- Consisent with its development on coal consumption, China's growth in CO2 emissions has been substantial. The *increase* between 2010 and 2010 exceeds the total emissions of the EU. However, China's emmissions have plateaued in 2013 and have slightly decreased since then. On a per capita basis, China's emissions have plateaued on a level between Germany and France.
+- Consisent with its development on coal consumption, China's growth in CO2 emissions has been substantial. The *increase* between 2010 and 2010 exceeds the total emissions of the EU. However, China's emissions have plateaued in 2013 and have slightly decreased since then. On a per capita basis, China's emissions have plateaued on a level between Germany and France.
 
-- While still on a much smaller level (in particular on a per capita basis), also Indias CO2 emmissions are quickly increasing. They almost doubled since 2000.
+- While still on a much smaller level (in particular on a per capita basis), also Indias CO2 emissions are quickly increasing. They almost doubled since 2000.
 - US per capita emissions are still far above the level of China or other European countries and similar results hold for energy consumption.
-  - We see however a reduction of CO2 emmissions in the US. One reason is the substitution of coal with gas, but also total primary energy consumption has gone down.
-- In the EU CO2 emmissions are only slowly decreasing, with primary energy consumption beeing quite flat.
-- In Germany CO2 emmission stagnated in the last 4 years, after a soft decline before.
+  - We see however a reduction of CO2 emissions in the US. One reason is the substitution of coal with gas, but also total primary energy consumption has gone down.
+- In the EU CO2 emissions are only slowly decreasing, with primary energy consumption beeing quite flat.
+- In Germany CO2 emission stagnated in the last 4 years, after a soft decline before.
     - In this period renewable energy production has steadily grown.
     - On the other hand, also electricity production by CO2 intensive coal has increased while less electricity has been produced from gas and nuclear energy.
  
 - It is also interesting to compare total primary energy usage per capita and tonnes CO2 emmission per tonne oil-equivalent of primary energy usage:
   - Germany and the US emmit almost the same amount of CO2 per unit energy, but the US has much larger energy usage per capita.
   - In contrast, Germany and France have relatively similar primary energy consumption per capita, but France uses substantially less carbon per energy unit.
-  - While CO2 emmissions per energy unit are recently slowly declining in both OECD and Non-OECD countries, primary energy consumption has quickly increased in Non-OECD countries, albeit, as we see for China and India, still on a much lower per capita level than in Germany, France or the US.
+  - While CO2 emissions per energy unit are recently slowly declining in both OECD and Non-OECD countries, primary energy consumption has quickly increased in Non-OECD countries, albeit, as we see for China and India, still on a much lower per capita level than in Germany, France or the US.
     
 - The CO2 emissions per $ of GDP are generally decreasing, but there are still substantial gaps between countries.
