@@ -2,7 +2,7 @@
 layout: post
 title: 'P-Values, Sample Size and Data Mining'
 cover: 
-date: 2018-04-09 12:00:00
+date: 2018-04-09 20:00:00
 categories: r
 tags: [R]
 ---  
