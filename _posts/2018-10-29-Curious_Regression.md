@@ -214,5 +214,5 @@ but just be sly,
 <br>
 and never simultaneously regress,
 <br>
-$y$ on $x$ *and* $x$ on $y$!
+$y$ on $x$ and $x$ on $y$.
 </p></blockquote>
