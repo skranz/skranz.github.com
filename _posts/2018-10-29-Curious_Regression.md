@@ -3,6 +3,7 @@ layout: post
 title: "About a Curious Feature and Interpretation of Linear Regressions"
 cover: 
 date: 2018-10-29 08:00:00
+mathjax: true
 categories: r
 tags: [R]
 ---  
