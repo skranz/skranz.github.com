@@ -141,7 +141,7 @@ We estimate that 1 cm higher height corresponds on average with $\hat \beta_1 = 
 and
 
 <blockquote>
-We also estimate that 1 kg higher weight *corresponds* on average with $\hat \alpha_1 = 0.5$ cm higher height.
+We also estimate that 1 kg higher weight corresponds on average with $\hat \alpha_1 = 0.5$ cm higher height.
 </blockquote>
 
 Well, this seems like a good method to generate headaches, get dozens of emails that there must be a typo in my script, and to cause a significant drop of my course evaluation...
