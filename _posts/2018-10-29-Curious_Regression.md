@@ -134,15 +134,15 @@ While the red line minimizes the sum of squared vertical distance from the point
 
 So, should I present in my introductory course something like the following pair of simplified interpretations of estimated regression slopes?
 
-<blockquote>
+<blockquote><p>
 We estimate that 1 cm higher height corresponds on average with $\hat \beta_1 = 1$ kg higher weight.
-</blockquote>
+</p></blockquote>
 
 and
 
-<blockquote>
+<blockquote><p>
 We also estimate that 1 kg higher weight corresponds on average with $\hat \alpha_1 = 0.5$ cm higher height.
-</blockquote>
+</p></blockquote>
 
 Well, this seems like a good method to generate headaches, get dozens of emails that there must be a typo in my script, and to cause a significant drop of my course evaluation...
 
@@ -207,7 +207,7 @@ In the end, statistics *is* subtle and some simplifications in introductory clas
 
 I just will follow this advice:
 
-<blockquote>
+<blockquote><p>
 Don't make you course a mess,
 <br>
 but just be sly,
@@ -215,4 +215,4 @@ but just be sly,
 and never simultaneously regress,
 <br>
 $y$ on $x$ *and* $x$ on $y$!
-</blockquote>
+</p></blockquote>
