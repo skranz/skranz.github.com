@@ -8,6 +8,13 @@ categories: r
 tags: [R]
 ---  
 
+<style>
+blockquote {
+  font-size: 1em;
+  font-weight: 800;
+}
+</style>
+
 A small blog post with a riddle, simulation, theory and a concluding rhyme.
 
 
@@ -20,7 +27,7 @@ $$y_i = 0 + 1  \cdot x_i + \hat \varepsilon$$
 One early message in our Economics 101 course is that for such a regression with non-experimental data, one should *not* interpret the estimated coefficient $\hat \beta_1$ in a causal way, by saying that one more cm height *leads* to one more kg weight. One should rather interpret $\hat \beta_1$ as a quantitative measure of the linear *relationship* between $x$ and $y$, e.g. using a formulation like:
 
 <blockquote>
-We estimate that 1 cm higher height *corresponds* on average with $\hat \beta_1 = 1$ kg higher weight. 
+We estimate that 1 cm higher height <emph>corresponds<emph> on average with $\hat \beta_1 = 1$ kg higher weight. 
 </blockquote>
 
 ## A simulation study with an interesting finding
@@ -67,7 +74,7 @@ To make this blog entry a bit more interactive, I have added quiz powered by Goo
 ... scroll down to continue...
 <br>
 
-<p style="padding-bottom: 3cm;">
+<p style="padding-bottom: 3cm;"></p>
 
 Here is the result of the regression:
 
@@ -129,11 +136,15 @@ While the red line minimizes the sum of squared vertical distance from the point
 
 So, should I present in my introductory course something like the following pair of simplified interpretations of estimated regression slopes?
 
-> We estimate that 1 cm higher height *corresponds* on average with \(\hat \beta_1 = 1\) kg higher weight.
+<blockquote>
+We estimate that 1 cm higher height corresponds on average with $\hat \beta_1 = 1$ kg higher weight.
+</blockquote>
 
 and
 
-> We also estimate that 1 kg higher weight *corresponds* on average with \(\hat \alpha_1 = 0.5\) cm higher height.
+<blockquote>
+We also estimate that 1 kg higher weight *corresponds* on average with $\hat \alpha_1 = 0.5$ cm higher height.
+</blockquote>
 
 Well, this seems like a good method to generate headaches, get dozens of emails that there must be a typo in my script, and to cause a significant drop of my course evaluation...
 
@@ -190,16 +201,18 @@ If we just want to have a simple quantitative measure for the linear relationshi
 
 Yet, there are many reasons to focus just on simple linear regressions. For example, it more closely relates to the estimation of causal effects and the estimation of parameters of structural models.
 
-So maybe one should always introduce the linear regression model with all relevant assumptions and then stick to a more precise non-causal interpretation for the slope of a simple linear regression, like: "If we observe a 1 cm higher height, our best linear unbiassed  prediction for the weight increases by \(\hat \beta_1 = 1\) kg." But I don't see how *that* would be a good strategy for my Econ 101 course. 
+So maybe one should always introduce the linear regression model with all relevant assumptions and then stick to a more precise non-causal interpretation for the slope of a simple linear regression, like: "If we observe a 1 cm higher height, our best linear unbiassed  prediction for the weight increases by $\hat \beta_1 = 1$ kg." But I don't see how *that* would be a good strategy for my Econ 101 course. 
 
 In the end, statistics *is* subtle and some simplifications in introductory classes just seem reasonable. I guess, I will just stick in my course with both: simple least squares regression and the simple interpretation.
 
 I just will follow this advice:
 
->Don't make you course a mess,
->
->but just be sly,
->
->and never simultaneously regress,
->
->$y$ on $x$ *and* $x$ on $y$!
+<blockquote>
+Don't make you course a mess,
+<br>
+but just be sly,
+<br>
+and never simultaneously regress,
+<br>
+$y$ on $x$ *and* $x$ on $y$!
+</blockquote>
