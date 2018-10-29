@@ -10,7 +10,7 @@ tags: [R]
 
 <style>
 blockquote {
-  font-size: 1em;
+  font-size: 17px;
   font-weight: 800;
 }
 </style>
@@ -153,9 +153,11 @@ Instead of minimizing the vertical or horizontal residuals, one could minimize t
 Looking up Wikipedia, we find the following formula for the slope of an orthogonal regression of $y$ on $x$:
 
 $$\tilde \beta_1 = \frac{s_{yy}-s_{xx} + \sqrt{ (s_{yy}-s_{xx})^2 + 4 s_{xy}^2}} {2 s_{xy}}$$
+
 where $s_{xx}$ and $s_{yy}$ are the sample variances of $x$ and $y$, respectively, and $s_{xy}$ is the sample covariance. 
 
 Let $\tilde \alpha_1$ be the slope of the orthogonal regression of $x$ on $y$. One can show that both slopes indeed satisfy the relationship that we get when swapping $y$ and $x$ for a deterministic linear curve, i.e.
+
 $$\tilde \alpha_1 = \frac{1}  {\tilde \beta_1}$$
 
 We can also verify this numerically with R:
