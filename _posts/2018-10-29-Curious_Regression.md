@@ -14,12 +14,14 @@ A small blog post with a riddle, simulation, theory and a concluding rhyme.
 Consider a fictitious example in which we have collected a sample of somewhat overweight persons for which we measured weight in kg as $y$ and height in cm as $x$. We estimate the following simple linear regression:
 
 $$y_i = \hat \beta_0 + \hat \beta_1  \cdot x_i +  \hat \varepsilon$$
-$$y_i = 0 + 1  \cdot x_i + \hat \varepsilon$$
 
+$$y_i = 0 + 1  \cdot x_i + \hat \varepsilon$$
 
 One early message in our Economics 101 course is that for such a regression with non-experimental data, one should *not* interpret the estimated coefficient $\hat \beta_1$ in a causal way, by saying that one more cm height *leads* to one more kg weight. One should rather interpret $\hat \beta_1$ as a quantitative measure of the linear *relationship* between $x$ and $y$, e.g. using a formulation like:
 
-> We estimate that 1 cm higher height *corresponds* on average with \(\hat \beta_1 = 1\) kg higher weight. 
+<blockquote>
+We estimate that 1 cm higher height *corresponds* on average with $\hat \beta_1 = 1$ kg higher weight. 
+</blockquote>
 
 ## A simulation study with an interesting finding
 
@@ -32,8 +34,11 @@ x = rnorm(n)
 eps = rnorm(n)
 y = x + eps
 ```
+
 that simulates data for a simple linear regression model
+
 $$y_i = \beta_0 + \beta_1 x + \varepsilon$$
+
 with $\beta_0=0$ and $\beta_1=1$.
 
 If we estimate that model, we indeed find a slope $\hat \beta_1$ close to 1 in our sample:
