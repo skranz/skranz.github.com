@@ -184,8 +184,8 @@ a:hover {
 .post p {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 17px;
-  margin-bottom: 0.45em;
-  margin-top: 0.45em;
+  margin-bottom: 0.4em;
+  margin-top: 0.4em;
   text-align: justify;
 }
 
@@ -210,9 +210,12 @@ a:hover {
 
 .post pre {
   border: 1px solid #ddd;
-  background-color: #F2F8FC;
-  font-size: 13px;
+  background-color: #eee;
+  font-size: 14px;
   padding: 0 .4em;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+
 }
 
 .post pre code {
