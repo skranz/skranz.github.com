@@ -79,6 +79,7 @@ coef(lm(x~y))
 ##  (Intercept)            y 
 ## -0.001058499  0.510719332
 ```
+
 Interestingly, the slope is now close to $1/2$ instead of $1$!
 (And yes, the standard errors are very small.)
 
@@ -86,12 +87,16 @@ Being not a statistician by training, I must admit that I was quite surprised by
 
 Of course, the observed result is fully consistent with the mathematics of the simple least squares estimator. The estimated slope of a simple linear regression of $y$ on $x$ is given by
 
-\[\hat \beta_1 = \frac {Cov(x,y)} {Var(x)}\]
+$$\hat \beta_1 = \frac {Cov(x,y)} {Var(x)}$$
 
 Let $\hat \alpha_1$ denote the estimated slope of the regression of $x$ on $y$. We have
-\[\hat \alpha_1 = \frac {Cov(y,x)} {Var(y)}\]
+
+$$\hat \alpha_1 = \frac {Cov(y,x)} {Var(y)}$$
+
 Since the covariance is symmetric, i.e. $Cov(x,y) = Cov(y,x)$, we thus find
-\[\frac{\hat \alpha_1}{\hat \beta_1} = \frac{Var(x)}{Var(y)}\]
+
+$$\frac{\hat \alpha_1}{\hat \beta_1} = \frac{Var(x)}{Var(y)}$$
+
 The ratio of the slopes of the two regressions is equal to the ratio of the sample variances of $x$ and $y$.
 
 In our data generating process $y$ as the sum of $x$ and $\varepsilon$ has twice the variance than $x$, which also holds approximately for the sample variances:
