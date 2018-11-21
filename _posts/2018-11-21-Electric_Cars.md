@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'RTutor: Driving Electric or Gasoline Cars? Comparing the Pollution Damages.'
+title: 'RTutor: Driving Electric or Gasoline Cars? Comparing the Pollution Damages'
 cover: 
 date:   2018-11-21 8:00:00
 categories: r
