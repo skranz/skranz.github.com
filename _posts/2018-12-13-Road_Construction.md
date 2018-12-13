@@ -21,7 +21,7 @@ Here is a small screenshot:
 
 <hr>
 
-Like in previous RTutor problem sets, you can enter free R code in a web based shiny app. The code will be automatically checked and you can get hints how to proceed. In addition you are challenged by many multiple choice quizzes.
+Like in previous RTutor problem sets, you can enter free R code in a web based shiny app. The code will be automatically checked and you can get hints how to proceed. In addition you are challenged by multiple choice quizzes.
 
 
 You can test the problem set online on the rstudio.cloud: [https://rstudio.cloud/project/137023](https://rstudio.cloud/project/137023) Source the `run.R` file to start the problem set.
