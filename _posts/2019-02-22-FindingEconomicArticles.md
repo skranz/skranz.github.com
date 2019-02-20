@@ -23,6 +23,8 @@ One gets some information about the size of the data files and the used code fil
 
 The main idea is that such a search function could be helpful for teaching  economics and data science. For example, my students can use the app to find an interesting topic for a Bachelor or Master Thesis in form of an interactive analysis with <a href="https://github.com/skranz/RTutor" target="_blank">RTutor</a>. You could also generate a topic list for a seminar, in which students shall replicate some key findings of a resarch article.
 
+While the app performs well for a single user, I have not tested the performance  for many simultaneous users. If it is too sluggish or you don't get connected there are perhaps currently too many users. Then just try it out a bit later.
+
 If you want to analyse yourself the collected data underlying the search app, you can download the zipped SQLite databases using the following links:
 <ul>
 <li>
