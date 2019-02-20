@@ -9,7 +9,7 @@ tags: [R, shiny]
 
 In my view, one of the greatest developments during the last decade in economics is that the <a href="https://www.aeaweb.org/journals/" target="_blank">Journals of the American Economic Association</a> and some other leading journals require authors to upload the replication code and data sets of accepted articles.
 
-I wrote a Shiny app that allows to search currently among more than 3000 articles that have an accessible data and code supplement. It can be accessed here:
+I wrote a Shiny app that allows to search currently among more than 3000 articles that have an accessible data and code supplement. Just click here to use it:
 
 <a href="http://econ.mathematik.uni-ulm.de:3200/ejd/" target="_blank">http://econ.mathematik.uni-ulm.de:3200/ejd/</a>
 
@@ -26,7 +26,7 @@ The main idea is that such a search function could be helpful for teaching  econ
 If you want to analyse yourself the collected data underlying the search app, you can download the zipped SQLite databases using the following links:
 <ul>
 <li>
-Main database (should suffices for most analyses):<br><a href="http://econ.mathematik.uni-ulm.de/ejd/articles.zip">http://econ.mathematik.uni-ulm.de/ejd/articles.zip</a>
+Main database (should suffice for most analyses):<br><a href="http://econ.mathematik.uni-ulm.de/ejd/articles.zip">http://econ.mathematik.uni-ulm.de/ejd/articles.zip</a>
 </li><li>
  Large database containing names and sizes of all files in the data and code supplements:<br><a href="http://econ.mathematik.uni-ulm.de/ejd/articles.zip">http://econ.mathematik.uni-ulm.de/ejd/files.zip</a> 
 </li>
@@ -47,7 +47,8 @@ File type conversion between databases and R can sometimes be a bit tedious. For
 
 ```r
 library(dbmisc)
-db = set.db.schemas(db, schema.file=system.file("schema/articles.yaml", package="EconJournalData"))
+db = set.db.schemas(db,schema.file=
+  system.file("schema/articles.yaml", package="EconJournalData"))
 ```
 
 Of course, for a simple analysis as ours below just using the standard function in the `DBI` package without schemata suffices. But I am just used to working with the `dbmisc` package.
@@ -144,7 +145,7 @@ fs %>% group_by(file_type) %>%
 
 Roughly 70% of the articles have Stata `do` files and almost a quarter Matlab `m` files. Using Open Source statistical Software seems not yet very popular among economists, less than 3% of articles have R code files, Python is below 1% and only 2 articles have Julia code.
 
-This dominance of Stata in economics never ceases to surprise me, in particular when for some reason I just happened to open the Stata do file editor and compare it with RStudio... But then, I am not an expert in writing empirical economic research papers - I just like R programming and rather passively consume empirical research. For writing empirical papers it probably *is* convenient that in Stata you can add an `robust` or `robust cluster` option to almost every type of regression in order to quickly get the economists' standard standard errors...
+This dominance of Stata in economics never ceases to surprise me, in particular when for some reason I just happened to open the Stata do file editor and compare it with RStudio... But then, I am not an expert in writing empirical economic research papers - I just like R programming and rather passively consume empirical research. For writing empirical papers it probably *is* convenient that in Stata you can add a `robust` or `robust cluster` option to almost every type of regression in order to quickly get the economists' standard standard errors...
 
 For a teaching empirical economics with R the dominance of Stata is not neccessarily bad news. It means that there are a lot of studies which students can replicate in R. Such replication would be considerably less interesting if the original code of the articles would already be given in R.
 
@@ -183,9 +184,10 @@ head(sum_dat)
 
 ```r
 library(ggplot2)
-ggplot(sum_dat, aes(x=year, y=share, color=file_type)) + geom_line(size=1.5) + scale_y_log10() + theme_bw()
+ggplot(sum_dat, aes(x=year, y=share, color=file_type)) 
+  + geom_line(size=1.5) + scale_y_log10() + theme_bw()
 ```
 
-![](FindingEconomicArticles_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+<img src="http://skranz.github.io/images/search_ggplot.PNG" style="width: 100%; height: 100%">
 
 Well, maybe there is a little upward trend for the open source languages, but not too much seems to have happened over time so far...
