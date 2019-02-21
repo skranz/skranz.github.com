@@ -2,7 +2,7 @@
 layout: post
 title: 'Finding Economic Articles With Data'
 cover: 
-date:   2019-02-22 9:00:00
+date:   2019-02-21 5:00:00
 categories: r
 tags: [R, shiny]
 ---
@@ -145,7 +145,7 @@ fs %>% group_by(file_type) %>%
 <tr><td class="data-frame-td-bottom" nowrap bgcolor="#dddddd">jl</td><td class="data-frame-td-bottom" nowrap bgcolor="#dddddd">2</td><td class="data-frame-td-bottom" nowrap bgcolor="#dddddd">0.05</td></tr>
 </table>
 
-Roughly 70% of the articles have Stata `do` files and almost a quarter Matlab `m` files. Using Open Source statistical Software seems not yet very popular among economists, less than 3% of articles have R code files, Python is below 1% and only 2 articles have Julia code.
+Roughly 70% of the articles have Stata `do` files and almost a quarter Matlab `m` files. Using open source statistical software seems not yet very popular among economists: less than 3% of articles have R code files, Python is below 1% and only 2 articles have Julia code.
 
 This dominance of Stata in economics never ceases to surprise me, in particular when for some reason I just happened to open the Stata do file editor and compare it with RStudio... But then, I am not an expert in writing empirical economic research papers - I just like R programming and rather passively consume empirical research. For writing empirical papers it probably *is* convenient that in Stata you can add a `robust` or `robust cluster` option to almost every type of regression in order to quickly get the economists' standard standard errors...
 
