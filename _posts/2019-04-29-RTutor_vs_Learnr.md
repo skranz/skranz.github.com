@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Why use RTutor for interactive tutorials if there is RStudio's learnr?'
+title: "Why use RTutor for interactive tutorials if there is RStudio's learnr?"
 cover: 
 date:   2019-04-29 9:00:00
 categories: r
