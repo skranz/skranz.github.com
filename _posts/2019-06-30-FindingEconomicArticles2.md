@@ -146,9 +146,9 @@ dat %>%
 ## 20 The Economic Benefits of Pharmaceutical Innovations: The Case of~     7
 ## # ... with 679 more rows
 ```
-
-For a nice thumbnail in R-bloggers let us finish with a screenshot of the app:
 <br>
+For a nice thumbnail in R-bloggers let us finish with a screenshot of the app:
+<br><br>
 <img src="http://skranz.github.io/images/search2.PNG" style="width: 100%; height: 100%">
 <br>
 
