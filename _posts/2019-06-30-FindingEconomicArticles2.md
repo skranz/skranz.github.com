@@ -7,12 +7,11 @@ categories: r
 tags: [R, shiny]
 ---
 
-
 An <a href="https://skranz.github.io/r/2019/02/21/FindingEconomicArticles.html">earlier post</a> from February, describes a Shiny app that allows to search among currently more than 4000 economic articles that have an accessible data and code supplement. Finally, I managed to configure an nginx reverse proxy server and now you can also access the app under a proper https link here:
 
 [https://ejd.econ.mathematik.uni-ulm.de](https://ejd.econ.mathematik.uni-ulm.de)
 
-(I was very positively surprised how easy [certbot](https://certbot.eff.org/) makes it to add https.) Some colleagues told me that they could not access the app under the originally posted link:
+(I was very positively surprised how is it was to change http to https using [certbot](https://certbot.eff.org/)). Some colleagues told me that they could not access the app under the originally posted link:
 
 [http://econ.mathematik.uni-ulm.de:3200/ejd/](http://econ.mathematik.uni-ulm.de:3200/ejd/)
 
@@ -28,7 +27,10 @@ library(RSQLite)
 library(dbmisc)
 library(dplyr)
 db = dbConnect(RSQLite::SQLite(),"articles.sqlite") %>%
-  set.db.schemas(schema.file=system.file("schema/articles.yaml", package="EconJournalData"))
+  set.db.schemas(
+    schema.file=system.file("schema/articles.yaml",
+    package="EconJournalData")
+  )
 
 articles = dbGet(db,"article")
 fs = dbGet(db,"files_summary")
@@ -42,7 +44,11 @@ fs %>%
   group_by(journ) %>%
   mutate(num_art = n_distinct(id)) %>%
   filter(file_type=="r") %>%
-  summarize(num_art = first(num_art), num_with_r = n(), share_with_r=round((num_with_r / first(num_art))*100,2), ) %>%
+  summarize(
+    num_art = first(num_art),
+    num_with_r = n(),
+    share_with_r=round((num_with_r / first(num_art))*100,2)
+  ) %>%
   arrange(desc(share_with_r))
 ```
 
@@ -75,7 +81,10 @@ n_art = n_distinct(fs$id)
 
 # Count articles by file types and compute shares
 fs %>% group_by(file_type) %>%
-  summarize(count = n(), share=round((count / n_art)*100,2)) %>%
+  summarize(
+    count = n(), 
+    share=round((count / n_art)*100,2)
+  ) %>%
   # note that all file extensions are stored in lower case
   filter(file_type %in% c("do","r","py","jl","m")) %>%
   arrange(desc(share))
