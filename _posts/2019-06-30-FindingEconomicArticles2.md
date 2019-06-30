@@ -11,7 +11,7 @@ An <a href="https://skranz.github.io/r/2019/02/21/FindingEconomicArticles.html">
 
 [https://ejd.econ.mathematik.uni-ulm.de](https://ejd.econ.mathematik.uni-ulm.de)
 
-(I was very positively surprised how is it was to change http to https using [certbot](https://certbot.eff.org/)). Some colleagues told me that they could not access the app under the originally posted link:
+(I was very positively surprised how easy is it was to change http to https using [certbot](https://certbot.eff.org/)). Some colleagues told me that they could not access the app under the originally posted link:
 
 [http://econ.mathematik.uni-ulm.de:3200/ejd/](http://econ.mathematik.uni-ulm.de:3200/ejd/)
 
