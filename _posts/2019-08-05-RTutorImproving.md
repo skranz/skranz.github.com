@@ -24,7 +24,8 @@ library(RTutorSAGI)
 sub.li = load.subs(sub.dir="sub", warn=FALSE)
 
 # Create summary of solution attempts by chunk
-sum.df = analyse.subs(sub.li, rps.dir="org_ps", just.summary = TRUE, protracted.minutes = 30)
+sum.df = analyse.subs(sub.li, rps.dir="org_ps",
+  just.summary = TRUE, protracted.minutes = 30)
 
 # Show top 10 of chunks were students
 # needed most solution attempts
@@ -68,8 +69,10 @@ sim.and.est <- function(beta0=100,beta1=-1,...) {
   # Compute the estimated coefficient beta.hat from a linear regression
   # of the demand function  
   beta.hat = coef(lm.fit(y=data$q, x=cbind(1,data$p)))
-  # Generate and return a data.frame containing the estimated and true coefficients
-  ret = data.frame(coef.name=c("beta0","beta1"),est.coef=beta.hat, true.coef=c(beta0,beta1))
+  # Generate and return a data.frame containing 
+  # the estimated and true coefficients
+  ret = data.frame(coef.name=c("beta0","beta1"),
+    est.coef=beta.hat, true.coef=c(beta0,beta1))
   return(ret)
 }
 ```
@@ -93,7 +96,8 @@ The call above saves in the directory `./chunk_logs` for every chunk where at le
 
 # NEW USER solved after 3 failures (3.9 mins) *********************
 
-# A function that simulates random prices and demand and estimates beta.hat
+# A function that simulates random prices and demand
+# and estimates beta.hat
 sim.and.est = function(beta0=100,beta1=-1,...) {  
   data = sim.data(beta0=beta0, beta1=beta1, ...)
 
@@ -103,8 +107,10 @@ sim.and.est = function(beta0=100,beta1=-1,...) {
   coef(reg)
   # enter your code here ...
   
-  # Generate and return a data.frame containing the estimated and true coefficients
-  ret = data.frame(coef.name=c("beta0","beta1"),est.coef=beta.hat, true.coef=c(beta0,beta1))
+  # Generate and return a data.frame containing the
+  # estimated and true coefficients
+  ret = data.frame(coef.name=c("beta0","beta1"),
+    est.coef=beta.hat, true.coef=c(beta0,beta1))
   return(ret)
 }
 
@@ -121,8 +127,10 @@ sim.and.est = function(beta0=100,beta1=-1,...) {
   coef(reg)
   # enter your code here ...
   
-  # Generate and return a data.frame containing the estimated and true coefficients
-  ret = data.frame(coef.name=c("beta0","beta1"),est.coef=beta.hat, true.coef=c(beta0,beta1))
+  # Generate and return a data.frame containing the
+  # estimated and true coefficients
+  ret = data.frame(coef.name=c("beta0","beta1"),
+    est.coef=beta.hat, true.coef=c(beta0,beta1))
   return(ret)
 }
 
@@ -139,8 +147,10 @@ sim.and.est = function(beta0=100,beta1=-1,...) {
   coef(reg)
   # enter your code here ...
   
-  # Generate and return a data.frame containing the estimated and true coefficients
-  ret = data.frame(coef.name=c("beta0","beta1"),est.coef=beta.hat, true.coef=c(beta0,beta1))
+  # Generate and return a data.frame containing the
+  # estimated and true coefficients
+  ret = data.frame(coef.name=c("beta0","beta1"),
+    est.coef=beta.hat, true.coef=c(beta0,beta1))
   return(ret)
 }
 
@@ -160,7 +170,10 @@ The first user makes several mistakes: not using the variables `p` and `q` from 
 ```
 Warning: Your function uses the global variable(s) 
     beta.hat, p, q
-Often global variables in a function indicate a bug and you just have forgotten to assign values to beta.hat, p, q inside your function. Either correct your function or make sure that you truely want to use these global variables inside your function.
+Often global variables in a function indicate a bug and you just have
+forgotten to assign values to beta.hat, p, q inside your function.
+Either correct your function or make sure that you truely want to
+use these global variables inside your function.
 ```
 However the automatic hints in RTutor don't allow to analyse step by step the different commands inside a function. Looking at more users in the log, one finds that there are many ways to write an erroneous function. This means custom hints were also of limited use here.
 
@@ -234,7 +247,8 @@ Here is not really a need to customize any hint because every student finally ma
 X = cbind(1,p)
 #< add_to_hint
 if (exists("x") & !exists("X")) {
-  cat("It looks like you assigned the value to 'x' (lowercase), but you shall assign the value to 'X' (uppercase).")
+  cat("It looks like you assigned the value to 'x' (lowercase),
+but you shall assign the value to 'X' (uppercase).")
 }
 #>
 ```
