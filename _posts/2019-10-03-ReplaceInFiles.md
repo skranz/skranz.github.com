@@ -22,7 +22,7 @@ You can then use the `Replace in Files` addin in RStudio under the `Addins`.
 
 Screenshot:
 
-<img src=""http://skranz.github.io/images/replace_in_files.PNG" style="width: 100%; height: 100%">
+<img src="http://skranz.github.io/images/replace_in_files.PNG" style="width: 100%; height: 100%">
 
 By default my addin searches in all files in your project directory (or if no project is open, in your working directory). Instead of changing the files in the background, it opens all files that contain the search pattern in RStudio and replaces the found patterns in RStudio without saving the files. This allows you the possibility to easily undo changes. You can quickly save all changes in RStudio via `File -> Save All`
 
