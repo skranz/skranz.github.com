@@ -1,0 +1,223 @@
+---
+title: "Analyzing Relational Contracts with R: Part I"
+cover: null
+date:   2019-12-10 9:00:00
+categories: r
+tags: [R]
+---
+
+
+One goal of game theory is to understand how effective cooperation can be sustained in relationships. You may have heard of [Axelrod's famous tournaments](https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation#Axelrod's_tournaments) that studied how effective different submitted strategies are in sustaining cooperation in repeated Prisoners' dilemma games.
+
+A related approach to understand the scope for cooperation in relationships is to characterize game theoretic *equilibria*, in which every player always acts optimal given the strategies of everybody else. This blog post illustrates the new R package [RelationalContracts](skranz.github.io/RelationalContracts/) that facilitates such equilibrium analysis. I also want to introduce you to the problem of multiple equilibria and how one can select equilibria by assuming parties explicitly negotiate the terms of their relationship.
+
+The second part of this blog series will introduce [stochastic games](https://en.wikipedia.org/wiki/Stochastic_game) that allow for more complex relationships with endogenous states. It also illustrates the *vulnerability paradoxon* and shows how one can account for *hold-up* concerns.
+
+The most well known game in game theory is probably the [prisoners' dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma). 
+The following code creates a variation of an infinitely repeated prisoners' dilemma with a bit larger action space:
+
+```r
+library(RelationalContracts)
+g = rel_game("Mutual Gift Game") %>%
+  rel_state("x0",
+    # Both players can pick effort
+    # on a grid between 0 and 1
+    A1 = list(e1=seq(0,1,by=0.1)),
+    A2 = list(e2=seq(0,1,by=0.1)),
+
+    # Stage game payoffs
+    pi1 = ~ e2 - 0.5*e1^2,
+    pi2 = ~ e1 - 0.5*e2^2
+  )
+```
+Each player $i$ chooses an effort level $e_i$ on a grid between 0 and 1 that directly benefits the other player. Effort involves for player $i$ cost of $\frac 1 2 e_i$ and grants the other player a benefit of $e_i$. While it would be jointly efficient if both players choose full effort $e_1=e_2=1$, the unique Nash equilibrium of the (one-shot) stage game is that both players choose zero effort.
+
+Yet, if players interact repeatedly, positive effort levels can be sustained in [subgame perfect equilibria](https://en.wikipedia.org/wiki/Subgame_perfect_equilibrium). The common assumption in the relational contracting literature is that players interact for [infinitely many periods](https://en.wikipedia.org/wiki/Repeated_game) and discount future payoffs with a discount factor $\delta \in [0,1)$. Discounting can be due to positive interest rates, or one can alternatively interpret $\delta$ as 1 minus an exogenous probability that the relationship breaks down after a period.
+
+The following code computes the highest effort levels that can be implemented in any subgame perfect equilibrium for a discount factor of $\delta=0.3$:
+
+
+```r
+# 1. Solve SPE and store it in game object
+g = rel_spe(g, delta=0.3) 
+# 2. Get equilibrium descripion as data frame
+#    and select actions on equilibrium path
+get_eq(g) %>% # 
+  select(ae.e1, ae.e2)
+```
+
+```
+## # A tibble: 1 x 2
+##   ae.e1 ae.e2
+##   <dbl> <dbl>
+## 1   0.6   0.6
+```
+
+The information above tells us that there is a subgame perfect equilibrium on whose equilibrium path both players will  choose efforts of $e_1=e_2=0.6$ in every period. 
+
+An equilibrium has to specify what players do after every possible history of play in the game. In particular, to induce positive effort levels, an equilibrium needs to describe some form of punishment that would follow should a player deviate and choose effort below the agreed upon 0.6. The harsher the punishment for deviations, the higher effort levels one can incentivize on the equilibrium path.  
+
+In our example game so called *grim-trigger* strategies implement the harshest possible punishment: should any player ever deviate from the agreed upon effort level then in all future periods players will play the Nash equilibrium of the stage game, i.e. they both chose zero effort.
+
+One can easily show that such grim-trigger strategies can implement a symetric effort level $e$ on the equilibrium path if and only if $$e - 0.5 \cdot e^2 \geq (1-\delta) e + \delta \cdot 0.$$ The left hand side is the average discounted payoff of a player on the equilibrium path. Average discounted payoffs are just the discounted sum of payoffs multiplied by $(1-\delta)$. This normalization puts payoffs of the repeated game on the same scale as payoffs of the stage game. The right hand side is the average discounted continuation payoff if a player deviates to zero effort. In the period of deviation she saves her effort cost but in all future periods payoffs are zero.
+
+However, there are many more strategy profiles that constitute a subgame perfect equilibrium (SPE). For example, another SPE of the repeated game is to always repeat the stage game Nash equilibrium of choosing zero effort. In other SPE, players may pick positive but lower effort levels than $0.6$. Effort levels may also be asymmetric or vary over time. Also different punishment schemes can be used, e.g. punishments that reduce effort only for a finite number of periods or asymmetric punishments that are more costly for the deviator than the other player.
+
+For sufficiently large discount factors there are infinitely many different equilibria and infinitely many different equilibrium payoffs.
+
+## Equilibrium payoff sets with and without transfers
+
+Numerically computing the set of SPE payoffs is a hard problem and tractable algorithms require additional assumptions.
+
+One assumption is that at the beginning of a period all players observe the realization of a standard uniform random variable that can be used as a public correlation device. This makes the SPE payoff set a [convex polyhedron](https://en.wikipedia.org/wiki/Convex_polytope). Another restriction is that one only looks at pure strategy equilibria, i.e. chosen actions are a deterministic function of the history of play and the outcome of the commonly observed correlation device.
+
+The following code solves and illustrates the SPE payoff set of our game assuming a public correlation device.
+
+```r
+library(RSGSolve)
+# Transform game in format used by RSGSolve
+rsg = make.rsg.game(g)
+# Solve SPE payoff set
+rsg.sol = solveSG(rsg=rsg,delta=0.3)
+
+# Show SPE payoff set
+plot.rsg.payoff.set(rsg.sol)
+# Mark payoff of the equilibrium described above 
+u.sym = 0.6 - 0.5*0.6^2
+points(x=u.sym,y=u.sym, pch=19)
+```
+
+![](./images/relcont/rsg_pd-1.svg)<!-- -->
+
+The library [RSGSolve](https://github.com/skranz/RSGSolve) is just a simple R interface to Benjamin Brook's package [SGsolve](https://github.com/babrooks/SGSolve) (developed with Dilip Abreu and Yuli Sannikov) that implements their algorithm described [here (2016)](http://www.benjaminbrooks.net/downloads/abs_stochasticgames.pdf).
+
+Many things become easier and much faster to compute (very relevant for larger games) if one makes the additional assumption that at the beginning of each period, before actions take place, players can make voluntary monetary transfers to each other (or to an uninvolved third party) and that players are risk-neutral. This is a common assumption in the relational contracting literature. Susanne Goldlücke and me have developed corresponding methods to compute and characterize equilibrium payoff sets ( [2012](http://www.wiwi.uni-bonn.de/kranz/Infinitely%20Repeated%20Games%20with%20Public%20Monitoring%20and%20Monetary%20Transfers.pdf) for [repeated games](https://en.wikipedia.org/wiki/Repeated_game) with transfers and [2017](https://www.uni-ulm.de/fileadmin/website_uni_ulm/mawi.inst.160/pdf_dokumente/mitarbeiter/kranz/dyngame.pdf) for more general [stochastic games](https://en.wikipedia.org/wiki/Stochastic_game) with transfers).
+
+The following code shows the SPE payoff set of our game assuming monetary transfers are possible.
+
+```r
+plot_eq_payoff_set(g)
+plot.rsg.payoff.set(rsg.sol,fill=NULL,lwd=2, add=TRUE)
+```
+
+![](./images/relcont/rsg_gk-1.svg)<!-- -->
+
+The thick black line shows for comparison the SPE payoff set without transfers. We see that transfers allow to implement more equilibrium payoffs, in particular more efficient unequal payoffs. 
+
+More importantly for every repeated game with transfers the SPE payoff set is such a simplex (just a triangle for two player games) with a linear [Pareto-frontier](https://en.wikipedia.org/wiki/Pareto_efficiency) that has a slope of -1. This means in two-player repeated games with transfers the SPE payoff sets are characterized by just 3 numbers:
+
+```r
+get_eq(g) %>%
+  select(v1,v2, U)
+```
+
+```
+## # A tibble: 1 x 3
+##      v1    v2     U
+##   <dbl> <dbl> <dbl>
+## 1     0     0  0.84
+```
+The values $v_1=0$ and $v_2=0$ describe the lowest SPE payoffs of player 1 and 2, respectively, that is the lower left point of the payoff set. The value $U=0.84$ is the highest possible sum of player 1 and player 2's SPE payoff. Every payoff $u$ on our linear Pareto-frontier satisfies that $u_1+u_2=U$.
+
+
+## Simple equilibria
+
+We have shown in our research that in repeated games with transfers every pure SPE payoff can be implemented with the following simple class of equilibria. On the equilibrium path in every period the same action profile $a^e$ is played and possible some transfers are conducted. Punishment has the following structure. If player $i$ deviates from the agreed upon action profile then she can redeem herself by paying a monetary fine to the other player at the beginning of the next period. If she does not pay the fine (or deviates from some other required payment on the equilibrium path) then for one period a punishment action profile $a^i$ is played. Afterwards, she has again the opportunity to stop the punishment by paying a fine and so on.
+
+The following code shows us the 3 relevant action profiles $a^e$, $a^1$ and $a^2$ for our example.
+
+```r
+get_eq(g) %>%
+  select(ae=ae.lab, a1=a1.lab, a2=a2.lab,U,v1,v2)
+```
+
+```
+## # A tibble: 1 x 6
+##   ae        a1    a2        U    v1    v2
+##   <chr>     <chr> <chr> <dbl> <dbl> <dbl>
+## 1 0.6 | 0.6 0 | 0 0 | 0  0.84     0     0
+```
+On the equilibrium path `ae` is played, i.e. both players pick effort 0.6. Both punishment profiles `a1` and `a2` are simply the stage game Nash equilibria that both players choose zero effort. (Not in every game it is optimal to punish with the stage game Nash equilibria though). A simple equilibrium also specifies monetary transfers and the size of fines, but the exact structure of these transfers is not shown. A key theoretical result is that by adapting the transfers in an incentive compatible way, one can implement every pure SPE payoff of the game (blue area in plot above) without changing the equilibrium path and punishment actions.
+
+## Many equilibria: What to we learn? What do we assume?
+
+No matter whether allowing for transfers or not: for sufficiently large discount factors most infinitly repeated games and generalizations have a huge set of equilibrium outcomes. And in games with more than 2 players, even more diverse behavior can be part of equilibrium strategies. For example there could be equilibria in which for no particular reason one player is a "leader" and other people mutually punish each other if they don't make gifts to that particular leader. 
+
+When loosely interpreting a subgame perfect equilibrium in real world terms, I would call it a *convention* that is stable in the sense that no individual alone has an incentive to ever deviate. So game theory supports the view that in our world with many people that are part of many relationships and interact repeatedly, a lot of stable conventions that guide behavior could arise. And looking at the world, we know that there are and have been many different systems laws and conventions, differing quite a bit in dimensions as efficiency or equity.
+
+On the other hand, conventions and codified laws don't just fall from the sky but people can reason, discuss and coordinate how they want to structure their relationships. 
+
+Look at our example game above. Why should two rational parties follow the worst possible equilibrum and never exert any effort when both can be strictly better off by coordinating to a convention (picking an equilibrium) that supports positive effort levels?
+
+A common assumption in the relational contracting literature is that players don't pick a [Pareto-dominated](https://en.wikipedia.org/wiki/Pareto_efficiency) equilibrium. This means they don't pick a particular equilibrium if there is another equilibrium that would make both player's better off (and at least one player strictly). 
+
+Of course, assuming that in real relationships parties really manage to always find all incentive compatible Pareto improvements is fairly  optimistic. But even if real world conventions are not Pareto optimal, one might be hopeful that the qualitative insights of how to structure relationships and which institutions facilitate cooperation from looking at Pareto-optimal equilbria are useful.
+
+While I share this view for repeated games, I want to later convince you that once we move to more general games with endogenous states, the predictions of Pareto-optimal equilibria can be quite unintuitive because this equilibrium selection rules out plausible hold-up concerns. But let's postpone this discussion to the second blog post...
+
+## What happens if a player becomes vulnerable?
+
+We often are interested how changes in the economic environment or institutions that govern the rules of the game affect the implementable equilibrium payoffs.
+
+Consider the following variation of our mutual gift game. Player 2 now also has the option to choose at zero cost negative effort of size `-vul` that hurts player 1. The parameter `vul=1` measures player 1's vulnerability: 
+
+```r
+g.vul = rel_game("Mutual Gift Game with Vulnerability") %>%
+  rel_param(vul=1, delta=0.3) %>%
+  rel_state("x0",
+    # Action spaces
+    A1 = list(e1=seq(0,1,by=0.1)),
+    A2 = list(e2=~c(-vul,seq(0,1,by=0.1))),
+    # Stage game payoffs
+    pi1 = ~ e2 - 0.5*e1^2,
+    pi2 = ~ e1 - 0.5*pmax(e2,0)^2
+  )
+```
+
+What will be the impact of player 1's vulnerability on the set of SPE payoffs? Let us solve the game with transfers:
+
+```r
+g.vul = rel_spe(g.vul)
+get_eq(g.vul) %>%
+  select(ae.lab, a1.lab)
+```
+
+```
+## # A tibble: 1 x 2
+##   ae.lab    a1.lab
+##   <chr>     <chr> 
+## 1 0.9 | 0.9 0 | -1
+```
+If player 1 is vulnerable, both players can more effectively cooperate and implement higher efforts of $e_1=e_2=0.9$ in a SPE. We see from $a^1$ that a deviation by player 1 is indeed punished by negative effort of player 2. The stronger punishment allows to incentivize higher effort by player 1. If player 1 chooses higher effort on the equilibrium path, it is also less attractive for player 2 to deviate since she would forego higher equilibrium path payoffs. Therefore also higher effort by player 2 can be implemented. (Transfers additionally facilitate smoothing of incentive constraints such that we can implement the same effort level for both players). This means also player 1 could in principle benefit from being vulnerable.
+
+Let us take a look at the equilibrium payoff sets with and without vulnerability of player 1:
+
+```r
+plot_eq_payoff_set(g.vul, colors="#ffaaaa", add.state.label = FALSE,plot.r = FALSE)
+plot_eq_payoff_set(g,add=TRUE, add.state.label = FALSE,plot.r = FALSE)
+```
+
+![](./images/relcont/vul_plot-1.svg)<!-- -->
+
+We indeed see that every point in the (blue) equilibrium payoff set without vulnerability is strictly Pareto-dominated by some point in the (red) equilibrium payoff set given a vulnerable player 1.
+
+Does is this mean that in this game it is beneficial for player 1 to be vulnerable? Not neccesarily. We see that with vulnerability there are also many equilibrium payoffs that make player 1 worse off than his worst equilibrium payoff without vulnerability. Restricting attentition to Pareto-optimal payoffs does not change this fact. 
+
+## Nash bargaining to select an equilibrium payoff
+
+To make sharper predictions, we need stronger assumptions on equilibrium selection. Let us assume that at the beginning of their relationship parties select an equilibrium via bargaining. The mathematic formulation of a [bargaining problem](https://en.wikipedia.org/wiki/Bargaining_problem) requires a feasible set of payoffs, which would be the set of SPE payoffs, and a disagreement payoff that will be implemented if no agreement is reached.
+
+In general a player benefits in bargaining if disagreement gives her a high payoff and the other player a low payoff. Unfortunately, there is no clear rule that specifies a single appropriate disagreement point when players bargaining over repeated game equilibria. In our example, let us assume that under disagreement both players choose in every period the stage game Nash equilibrium where everybody picks the lowest possible effort level, this means negative effort by player 2 if player 1 is vulnerable. This corresponds to the lower left point $(-1,0)$ of the SPE payoff set.
+
+Given a linear Pareto-frontier, the Nash bargaining solution splits the gains over the disagreement point equally. In our example, the Nash bargaining solution is just the center point of the Pareto frontier of SPE payoffs. Let us recall the payoff sets with and without vulnerability:
+
+```r
+plot_eq_payoff_set(g.vul, colors="#ffaaaa", add.state.label = FALSE)
+plot_eq_payoff_set(g,add=TRUE, add.state.label = FALSE)
+```
+
+![](./images/relcont/vul_plot2-1.svg)<!-- -->
+
+The Nash bargaining solutions for both cases are marked now with black dots. We see that player 1 would here be worse off from being vulnerable. Even though vulnerability allows to incentivize higher effort levels and thus creates efficiency gains, this positive effect is outweighed for player 1 by a strong weakening of her bargaining position arising from the vulnerability.
+
+This finishes the first part of this blog series. In the next part we will continue our study looking at stochastic games with endogenous states and discuss hold-up concerns and the *vulnerability paradoxon*...
