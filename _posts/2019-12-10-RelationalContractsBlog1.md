@@ -9,7 +9,7 @@ tags: [R]
 
 One goal of game theory is to understand how effective cooperation can be sustained in relationships. You may have heard of [Axelrod's famous tournaments](https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation#Axelrod's_tournaments) that studied how effective different submitted strategies are in sustaining cooperation in repeated Prisoners' dilemma games.
 
-A related approach to understand the scope for cooperation in relationships is to characterize game theoretic *equilibria*, in which every player always acts optimal given the strategies of everybody else. This blog post illustrates the new R package [RelationalContracts](skranz.github.io/RelationalContracts/) that facilitates such equilibrium analysis. I also want to introduce you to the problem of multiple equilibria and how one can select equilibria by assuming parties explicitly negotiate the terms of their relationship.
+A related approach to understand the scope for cooperation in relationships is to characterize game theoretic *equilibria*, in which every player always acts optimal given the strategies of everybody else. This blog post illustrates the new R package [RelationalContracts](https://skranz.github.io/RelationalContracts/) that facilitates such equilibrium analysis. I also want to introduce you to the problem of multiple equilibria and how one can select equilibria by assuming parties explicitly negotiate the terms of their relationship.
 
 The second part of this blog series will introduce [stochastic games](https://en.wikipedia.org/wiki/Stochastic_game) that allow for more complex relationships with endogenous states. It also illustrates the *vulnerability paradoxon* and shows how one can account for *hold-up* concerns.
 
