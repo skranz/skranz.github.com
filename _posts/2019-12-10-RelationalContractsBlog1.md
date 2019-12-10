@@ -86,8 +86,7 @@ plot.rsg.payoff.set(rsg.sol)
 u.sym = 0.6 - 0.5*0.6^2
 points(x=u.sym,y=u.sym, pch=19)
 ```
-
-![](./images/relcont/rsg_pd-1.svg)<!-- -->
+<img src="http://skranz.github.io/images/relcont/rsg_pd-1.svg">
 
 The library [RSGSolve](https://github.com/skranz/RSGSolve) is just a simple R interface to Benjamin Brook's package [SGsolve](https://github.com/babrooks/SGSolve) (developed with Dilip Abreu and Yuli Sannikov) that implements their algorithm described [here (2016)](http://www.benjaminbrooks.net/downloads/abs_stochasticgames.pdf).
 
@@ -100,7 +99,7 @@ plot_eq_payoff_set(g)
 plot.rsg.payoff.set(rsg.sol,fill=NULL,lwd=2, add=TRUE)
 ```
 
-![](./images/relcont/rsg_gk-1.svg)<!-- -->
+<img src="http://skranz.github.io/images/relcont/rsg_gk-1.svg">
 
 The thick black line shows for comparison the SPE payoff set without transfers. We see that transfers allow to implement more equilibrium payoffs, in particular more efficient unequal payoffs. 
 
@@ -197,7 +196,7 @@ plot_eq_payoff_set(g.vul, colors="#ffaaaa", add.state.label = FALSE,plot.r = FAL
 plot_eq_payoff_set(g,add=TRUE, add.state.label = FALSE,plot.r = FALSE)
 ```
 
-![](./images/relcont/vul_plot-1.svg)<!-- -->
+<img src="http://skranz.github.io/images/relcont/vul_plot-1.svg">
 
 We indeed see that every point in the (blue) equilibrium payoff set without vulnerability is strictly Pareto-dominated by some point in the (red) equilibrium payoff set given a vulnerable player 1.
 
@@ -216,7 +215,7 @@ plot_eq_payoff_set(g.vul, colors="#ffaaaa", add.state.label = FALSE)
 plot_eq_payoff_set(g,add=TRUE, add.state.label = FALSE)
 ```
 
-![](./images/relcont/vul_plot2-1.svg)<!-- -->
+<img src="http://skranz.github.io/images/relcont/vul_plot2-1.svg">
 
 The Nash bargaining solutions for both cases are marked now with black dots. We see that player 1 would here be worse off from being vulnerable. Even though vulnerability allows to incentivize higher effort levels and thus creates efficiency gains, this positive effect is outweighed for player 1 by a strong weakening of her bargaining position arising from the vulnerability.
 
