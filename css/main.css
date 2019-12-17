@@ -210,7 +210,8 @@ a:hover {
 
 .post pre {
   border: 1px solid #ddd;
-  background-color: #F2F8FC;
+  background-color: #f5f5f5;
+/*  background-color: #F2F8FC;*/
   font-size: 14px;
   padding: 0 .4em;
   margin-bottom: 0.3em;
@@ -224,13 +225,15 @@ a:hover {
   /*font-size: 14px;*/
   border: none;
   color: #222;
-  background-color: #F2F8FC;
+  background-color: #f5f5f5;
+/*  background-color: #F2F8FC;*/
   /*font-weight: bold;*/
 }
 
 .post code {
   padding: 0 3px;
-  background-color: #F2F8FC;
+  background-color: #f5f5f5;
+/*  background-color: #F2F8FC;*/
   border: solid 1px #dbe7f3;
 }
 
@@ -238,12 +241,14 @@ a:hover {
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;
-  background-color: #F2F8FC;
+  background-color: #f5f5f5;
+/*  background-color: #F2F8FC;*/
   color: #FFF;
 }
 
 .post pre.terminal code {
-  background-color: #F2F8FC;
+  background-color: #f5f5f5;
+/*  background-color: #F2F8FC;*/
   border: none;
 }
 
