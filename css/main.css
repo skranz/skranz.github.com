@@ -219,10 +219,10 @@ a:hover {
 
 }
 
-.language-plaintext pre code {
+.language-plaintext pre code, .language-plaintext code,
+.language-plaintext pre.terminal, .language-plaintext pre.terminal code {
   background-color: #ffffff !important;
 }
-
 
 .post pre code {
   margin-bottom: 30px;
