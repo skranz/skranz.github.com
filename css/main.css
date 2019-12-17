@@ -219,6 +219,11 @@ a:hover {
 
 }
 
+language-plaintext .post pre code {
+  background-color: #ffffff !important;
+}
+
+
 .post pre code {
   margin-bottom: 30px;
   /*font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;*/
