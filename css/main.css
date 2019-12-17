@@ -219,10 +219,6 @@ a:hover {
 
 }
 
-language-plaintext .post pre code {
-  background-color: #ffffff !important;
-}
-
 
 .post pre code {
   margin-bottom: 30px;
@@ -257,6 +253,12 @@ language-plaintext .post pre code {
 /*  background-color: #F2F8FC;*/
   border: none;
 }
+
+div.language-plaintext pre code {
+  background-color: #ffffff !important;
+}
+
+
 
 /*****************************************************************************/
 /*
