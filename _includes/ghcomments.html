@@ -1,0 +1,45 @@
+<div id="gh-comments">
+  <br><br>
+  <h6>COMMENTS</h6>
+  <div id="gh-comments-list">
+  </div>
+  <a class="btn btn-primary" href="https://github.com/skranz/skranz.github.com/issues/{{include.issueid}}">Comment via Github</a>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
+<script>
+var url = "https://github.com/skranz/skranz.github.com/issues/" + {{ include.issueid }}
+var api_url = "https://api.github.com/repos/skranz/skranz.github.com/issues/" + {{ include.issueid }} + "/comments"
+
+$(document).ready(function () {
+    $.ajax(api_url, {
+        headers: {Accept: "application/vnd.github.v3.html+json"},
+        dataType: "json",
+        success: function(comments) {
+            $("#gh-comments-list").append("Visit the <b><a href='" + url + "'>Github Issue</a></b> to comment on this post");
+            $.each(comments, function(i, comment) {
+
+                var date = new Date(comment.created_at);
+
+                var t = "<div class='gh-comment'>";
+                t += "<img src='" + comment.user.avatar_url + "' width='24px'>";
+                t += "<b><a href='" + comment.user.html_url + "'>" + comment.user.login + "</a></b>";
+                t += " posted at ";
+                t += "<em>" + date.toUTCString() + "</em>";
+                t += "<div class='gh-comment-hr'></div>";
+                t += comment.body_html;
+                t += "</div>";
+                $("#gh-comments-list").append(t);
+            });
+        },
+        error: function() {
+            $("#gh-comments-list").append("Comments are not open for this post yet.");
+        }
+    });
+});
+</script>

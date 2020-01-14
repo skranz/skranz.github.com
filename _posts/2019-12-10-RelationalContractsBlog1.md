@@ -221,9 +221,9 @@ The Nash bargaining solutions for both cases are marked now with black dots. We 
 
 This finishes the first part of this blog series. In the next part we will continue our study looking at stochastic games with endogenous states and discuss hold-up concerns and the *vulnerability paradoxon*...
 
+{% include ghcomments.html issueid=1 %}
 
-  
-<!-- Utterance Github powered forum -->
+<!-- Utterance Github powered forum 
 <script src="https://utteranc.es/client.js"
       repo="skranz/skranz.github.com"
       issue-term="Forum_RelationalContracting1"
@@ -232,4 +232,5 @@ This finishes the first part of this blog series. In the next part we will conti
       crossorigin="anonymous"
       async>
 </script>
+-->
 
