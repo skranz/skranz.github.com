@@ -71,6 +71,19 @@ a:hover {
   line-height: 1.75em;
 }
 
+.sidebar .posts-list {
+  padding-inline-start: 0px;
+}
+
+.sidebar .posts-list li {
+  text-align: left;
+  line-height: 1.25em;
+}
+
+.sidebar .posts-list .post-title {
+  font-size: 1.1em;
+}
+
 /*****************************************************************************/
 /*
 /* Site
