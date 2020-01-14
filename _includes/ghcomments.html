@@ -1,17 +1,10 @@
-<div id="gh-comments">
-  <h3>COMMENTS</h3>
-  <div id="gh-comments-list">
-  </div>
-  <a class="btn btn-primary" href="https://github.com/skranz/skranz.github.com/issues/{{include.issueid}}"><button>Comment via Github</button></a>
-</div>
-
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous">
-</script>
 
 <style>
+#gh-comment-list {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 5px;
+}
+
 .gh-comment-header {
   margin-top: 3px;
   padding-top: 4px;
@@ -35,6 +28,20 @@
   padding-left: 16px;
 } 
 </style>
+
+<div id="gh-comments">
+  <h3>COMMENTS</h3>
+  <div id="gh-comments-list">
+  </div>
+  <a class="btn btn-primary" href="https://github.com/skranz/skranz.github.com/issues/{{include.issueid}}"><button style="padding: 5px; margin-left: 10px;">Comment via Github</button></a>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
 <script>
 var url = "https://github.com/skranz/skranz.github.com/issues/" + {{ include.issueid }}
 var api_url = "https://api.github.com/repos/skranz/skranz.github.com/issues/" + {{ include.issueid }} + "/comments"
