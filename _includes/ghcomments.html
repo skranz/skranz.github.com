@@ -1,9 +1,8 @@
 <div id="gh-comments">
-  <br><br>
-  <h6>COMMENTS</h6>
+  <h3>COMMENTS</h3>
   <div id="gh-comments-list">
   </div>
-  <a class="btn btn-primary" href="https://github.com/skranz/skranz.github.com/issues/{{include.issueid}}">Comment via Github</a>
+  <a class="btn btn-primary" href="https://github.com/skranz/skranz.github.com/issues/{{include.issueid}}"><button>Comment via Github</button></a>
 </div>
 
 <script
@@ -12,6 +11,25 @@
   crossorigin="anonymous">
 </script>
 
+<style>
+.gh-comment-header {
+  margin-top: 3px;
+  padding-top: 4px;
+  background-color: #f1f8ff;
+  border-bottom-color: #c0d3eb;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: 1px solid #d1d5da;
+  
+}
+.gh-comment-body {
+  padding-top: 2px;
+  padding-right: 16px;
+  padding-left: 16px;
+} 
+</style>
 <script>
 var url = "https://github.com/skranz/skranz.github.com/issues/" + {{ include.issueid }}
 var api_url = "https://api.github.com/repos/skranz/skranz.github.com/issues/" + {{ include.issueid }} + "/comments"
@@ -21,18 +39,21 @@ $(document).ready(function () {
         headers: {Accept: "application/vnd.github.v3.html+json"},
         dataType: "json",
         success: function(comments) {
-            $("#gh-comments-list").append("Visit the <b><a href='" + url + "'>Github Issue</a></b> to comment on this post");
+            //$("#gh-comments-list").append("Visit the <b><a href='" + url + "'>Github Issue</a></b> to comment on this post");
             $.each(comments, function(i, comment) {
 
                 var date = new Date(comment.created_at);
 
                 var t = "<div class='gh-comment'>";
+                t += "<div class='gh-comment-header'>"
                 t += "<img src='" + comment.user.avatar_url + "' width='24px'>";
                 t += "<b><a href='" + comment.user.html_url + "'>" + comment.user.login + "</a></b>";
                 t += " posted at ";
                 t += "<em>" + date.toUTCString() + "</em>";
-                t += "<div class='gh-comment-hr'></div>";
+                t += "</div>"    
+                t += "<div class='gh-comment-body'>";
                 t += comment.body_html;
+                t += "</div>"
                 t += "</div>";
                 $("#gh-comments-list").append(t);
             });
