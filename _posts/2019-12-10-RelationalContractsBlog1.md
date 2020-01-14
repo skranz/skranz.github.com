@@ -223,14 +223,3 @@ This finishes the first part of this blog series. In the next part we will conti
 
 {% include ghcomments.html issueid=1 %}
 
-<!-- Utterance Github powered forum 
-<script src="https://utteranc.es/client.js"
-      repo="skranz/skranz.github.com"
-      issue-term="Forum_RelationalContracting1"
-      label="utterance"
-      theme="github-light"
-      crossorigin="anonymous"
-      async>
-</script>
--->
-
