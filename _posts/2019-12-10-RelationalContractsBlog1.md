@@ -220,3 +220,16 @@ plot_eq_payoff_set(g,add=TRUE, add.state.label = FALSE)
 The Nash bargaining solutions for both cases are marked now with black dots. We see that player 1 would here be worse off from being vulnerable. Even though vulnerability allows to incentivize higher effort levels and thus creates efficiency gains, this positive effect is outweighed for player 1 by a strong weakening of her bargaining position arising from the vulnerability.
 
 This finishes the first part of this blog series. In the next part we will continue our study looking at stochastic games with endogenous states and discuss hold-up concerns and the *vulnerability paradoxon*...
+
+
+  
+<!-- Utterance Github powered forum -->
+<script src="https://utteranc.es/client.js"
+      repo="skranz/skranz.github.com"
+      issue-term="Forum_RelationalContracting1"
+      label="utterance"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+</script>
+
