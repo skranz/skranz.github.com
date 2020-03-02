@@ -143,7 +143,7 @@ The opposite corner case of (`rho=1`) means the relational contract will be newl
 
 You may wonder why in the code above, we have specified an adjusted discount factor `adjusted.delta` instead of a discount factor `delta`. The reason is that in repeated games, i.e. games with a single unchanging state, a positive negotiation probability is essentially equivalent to a lower discount factor. For example, if we have a discount factor of `delta=0.7` and a negotiation probability of `rho=0.4`, the game has the same equilibria as if we had an adjusted discount factor of 
 
-    adjusted.delta = delta (1-rho) = 0.42.
+    adjusted.delta = delta * (1-rho) = 0.42.
 
 I often prefer comparative statics where I keep the adjusted discount factor constant when changing the negotiation probability.
 
@@ -224,7 +224,8 @@ x.df$x = paste0(x.df$x1,"_", x.df$x2)
 # Define game
 g = rel_game("Intensifying Relationship Game") %>%
   rel_param(x.seq=x.seq, e.seq=seq(0,1,by=0.05)) %>%
-  rel_states(x.df,A.fun=A.fun,static.A.fun=static.A.fun, pi1=0, pi2=0, static.pi.fun=static.pi.fun, trans.fun=trans.fun)
+  rel_states(x.df,A.fun=A.fun,static.A.fun=static.A.fun,
+    pi1=0, pi2=0, static.pi.fun=static.pi.fun, trans.fun=trans.fun)
 ```
 
 It is easy to make mistakes when writing these functions, in particular `trans.fun` that determines state transitions. When developing these functions, I want to debug them and take a look at their arguments, like `ax.df` and the computed results. You could do this via the `debug` function, e.g. call `debug(trans.fun)` before specifying the game. Personally, I prefer to use restore points instead. That is why you see the call to `restore.point` at the beginning of each function. For usage, take a look the restore point [vignette](https://cran.r-project.org/web/packages/restorepoint/vignettes/Guide_restorepoint.html). 
@@ -291,10 +292,11 @@ You see that with the positive negotiation probabilities players increase their 
 The function `eq_diagram` is useful to illustrate equilibrium path state transitions:
 
 ```r
-eq_diagram(g, just.eq.chain = TRUE,x0 = "0_0", label.fun = function(rne,...)  paste0(rne$x1, " ", rne$x2))
+eq_diagram(g, just.eq.chain = TRUE,x0 = "0_0",
+  label.fun = function(rne,...)  paste0(rne$x1, " ", rne$x2))
 ```
 
-<img src="http://skranz.github.io/images/relcont2/gradudal.PNG">
+<img src="http://skranz.github.io/images/relcont2/gradual.PNG">
 
 The argument `just.eq.chain = TRUE` means that only the states shall be shown that will be reached with on the equilibrium path when starting in state `x0="0_0"`.
 
