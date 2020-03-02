@@ -415,16 +415,7 @@ We can implement this assumption by solving for a RNE with a negotiation probabi
 ```r
 g = rel_rne(g,delta=0.9, rho=1) %>%
   rel_eq_as_discounted_sums()
-```
 
-```
-## 
-## Solve weakly directional state x_0 ... ok
-## Solve weakly directional state x_1 ... ok
-## Solve weakly directional state x_2 ... ok
-```
-
-```r
 # Show equilibrium outcomes
 get_eq(g) %>%
   select(x, ae.lab, U, r1,r2)
@@ -448,16 +439,7 @@ Negotiation probabilities between 0 and 1 allow intermediate cases between Paret
 ```r
 g = rel_rne(g,delta=0.9, rho = 0.2) %>%
   rel_eq_as_discounted_sums()
-```
 
-```
-## 
-## Solve weakly directional state x_0 ... ok
-## Solve weakly directional state x_1 ... ok
-## Solve weakly directional state x_2 ... ok
-```
-
-```r
 get_eq(g) %>%
   select(x, ae.lab,U, r1,r2)
 ```
@@ -479,16 +461,7 @@ A negotiation probability of 0.2 is still too large for positive investments in 
 ```r
 g = rel_rne(g,delta=0.9, rho = 0.05) %>%
   rel_eq_as_discounted_sums()
-```
 
-```
-## 
-## Solve weakly directional state x_0 ... ok
-## Solve weakly directional state x_1 ... ok
-## Solve weakly directional state x_2 ... ok
-```
-
-```r
 get_eq(g) %>%
   select(x, ae.lab,U,r1,r2)
 ```
