@@ -56,7 +56,7 @@ get_eq(g) %>%
 ## 2 x_vul 0.9 | 0.9  0.99    -1     0
 ```
 
-For a discount factor of $\delta=0.3$, we can implement efforts of $e_1=e_2=0.6$ without vulnerability, and efforts of $e_1=e_2=0.9$ with vulnerability. Vulnerability allows higher equilibrium effort because a deviation to zero effort can be more strongly be punished in the future. It is a common insight in the game theoretic analysis of relational contracts that stronger punishment opportunities allow to incentivize more cooperative behavior on the equilibrium path. 
+For a discount factor of `delta=0.3`, we can implement efforts of `e1=e2=0.6` without vulnerability, and efforts of `e1=e2=0.9` with vulnerability. Vulnerability allows higher equilibrium effort because a deviation to zero effort can be more strongly be punished in the future. It is a common insight in the game theoretic analysis of relational contracts that stronger punishment opportunities allow to incentivize more cooperative behavior on the equilibrium path. 
 
 Here are the sets of (average discounted) SPE continuation payoffs in states `x_vul` and `x_not`:
 
@@ -67,7 +67,7 @@ plot_eq_payoff_set(g,x = c("x_vul","x_not"))
 
 <img src="http://skranz.github.io/images/relcont2/unnamed-chunk-4-1.svg">
 
-Here $u_1$ and $u_2$ denote player 1's and 2's payoffs respectively. Note that we assume for all games studied in this post that at the beginning of each period players can perform voluntary monetary transfers and that players are risk neutral. This causes SPE payoff sets to have such a simple triangular structure.
+Here u1 and u2 denote player 1's and 2's payoffs respectively. Note that we assume for all games studied in this post that at the beginning of each period players can perform voluntary monetary transfers and that players are risk neutral. This causes SPE payoff sets to have such a simple triangular structure.
 
 The black dots mark the equilibrium payoff that would be selected if players picked a continuation payoff via Nash bargaining assuming the worst SPE continuation payoff is the disagreement point. While vulnerability allows more effective cooperation, it deteriorates player 1's bargaining position so much that he would be worse off should those Nash bargaining solutions be selected as continuation equilibria.
 
@@ -99,9 +99,9 @@ In our [recent paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=221060
 
 We introduce an new concept called *Repeated Negotiation Equilibrium* (RNE). The key idea is that parties from time to time newly negotiate the terms of their relationship. While past agreements are not automatically void after one period, current relative bargaining positions do matter and shape current and future interactions.
 
-To formalize this idea in a tractable fashion, we assume that there is an exogenous probability $\rho \in [0,1]$ that an existing relational contract is newly negotiated at the beginning of a period. If there is a new negotiation, continuation payoffs are selected via [Nash bargaining](https://en.wikipedia.org/wiki/Bargaining_problem) given the set of continuation payoffs (accounting for future negotiation payoffs and taking the lower left point as disagreement point).
+To formalize this idea in a tractable fashion, we assume that there is an exogenous probability `rho` between 0 and 1 that an existing relational contract is newly negotiated at the beginning of a period. If there is a new negotiation, continuation payoffs are selected via [Nash bargaining](https://en.wikipedia.org/wiki/Bargaining_problem) given the set of continuation payoffs (accounting for future negotiation payoffs and taking the lower left point as disagreement point).
 
-Consider the case in our example that player 1 made himself vulnerable. If new negotiations take place, player 1 then suffers from his weak bargaining position. Yet, as long as no new negotiations take place, players can stick to an agreement not to exploit player 1 weaker bargaining position. So for some random duration (that is longer in expectation for lower negotiation probabilities $\rho$) player 1's vulnerability will not be exploited. But at some point of time the relationship will be newly negotiated and then the vulnerability harms player 1. 
+Consider the case in our example that player 1 made himself vulnerable. If new negotiations take place, player 1 then suffers from his weak bargaining position. Yet, as long as no new negotiations take place, players can stick to an agreement not to exploit player 1 weaker bargaining position. So for some random duration (that is longer in expectation for lower negotiation probabilities `rho`) player 1's vulnerability will not be exploited. But at some point of time the relationship will be newly negotiated and then the vulnerability harms player 1. 
 
 The following code solves our game first for a high and then for a low negotiation probability:
 
@@ -137,17 +137,21 @@ rel_rne(g,adjusted.delta = 0.3, rho=0.1) %>%
 
 We see from the rows corresponding to state `x_0` that player 1 makes himself vulnerable only under the low negotiation probability (`rho=0.1`). Under a high negotiation probability (`rho=0.5`) player 1 does not make himself vulnerable because new negotiations in which player 1 will suffer from his weak bargaining position are expected to happen too soon.
 
-In the corner case of a zero negotiation probability ($\rho=0$) an RNE is simply a Pareto-optimal SPE.
+In the corner case of a zero negotiation probability (`rho=0`) an RNE is simply a Pareto-optimal SPE.
 
-The opposite corner case of ($\rho=1$) means the relational contract will be newly negotiated every period. Then there is no scope for relational contracting since informal past agreements are always ignored. This is essentially the behavioral assumptions of [hold-up models](https://en.wikipedia.org/wiki/Hold-up_problem). The crucial element of hold-up is that the terms of the relationship will be newly negotiated after some long term decisions have been made. In our [paper]((https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2210603)), we discuss in detail how our model combines the relational contracting and hold-up literatures and provides intuitive insights that don't arise in these corner cases.
+The opposite corner case of (`rho=1`) means the relational contract will be newly negotiated every period. Then there is no scope for relational contracting since informal past agreements are always ignored. This is essentially the behavioral assumptions of [hold-up models](https://en.wikipedia.org/wiki/Hold-up_problem). The crucial element of hold-up is that the terms of the relationship will be newly negotiated after some long term decisions have been made. In our [paper]((https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2210603)), we discuss in detail how our model combines the relational contracting and hold-up literatures and provides intuitive insights that don't arise in these corner cases.
 
-You may wonder why in the code above, we have specified an adjusted discount factor `adjusted.delta` instead of a discount factor `delta`. The reason is that in repeated games, i.e. games with a single unchanging state, a positive negotiation probability is essentially equivalent to a lower discount factor. For example, if we have a discount factor of $\delta=0.7$ and a negotiation probability of $\rho=0.4$, the game has the same equilibria as if we had an adjusted discount factor of $$\hat \delta = \delta (1-\rho) = 0.42.$$ I often prefer comparative statics where I keep the adjusted discount factor constant when changing the negotiation probability.
+You may wonder why in the code above, we have specified an adjusted discount factor `adjusted.delta` instead of a discount factor `delta`. The reason is that in repeated games, i.e. games with a single unchanging state, a positive negotiation probability is essentially equivalent to a lower discount factor. For example, if we have a discount factor of `delta=0.7` and a negotiation probability of `rho=0.4`, the game has the same equilibria as if we had an adjusted discount factor of 
+
+    adjusted.delta = delta (1-rho) = 0.42.
+
+I often prefer comparative statics where I keep the adjusted discount factor constant when changing the negotiation probability.
 
 ## <a id="gradual">Gradually intensifying relationship</a>
 
 I want to show you a more complex variation of our example, where Pareto optimal SPE are unintuitive while positive negotiation probabilities yield more intuitive results.
 
-We assume both players can make themselves more vulnerable over time in small or bigger steps. More precisely, a state consists of a pair $(x_1,x_2)$ where $x_i\in \{0,0.05, 0.1, ..., 0.5\}$ measures player $i's$ vulnerability. Via an the action `to_x1` (player 1) or `to_x2` (player 2) a player can in every period keep his current vulnerability level or increase to any higher level. But vulnerabilities can never decrease. 
+We assume both players can make themselves more vulnerable over time in small or bigger steps. More precisely, a state consists of a pair (x1,x2) where x1 and x2 lie on a grid {0,0.05, 0.1, ..., 0.5} and measure each player's vulnerability. Via an the action `to_x1` (player 1) or `to_x2` (player 2) a player can in every period keep his current vulnerability level or increase to any higher level. But vulnerabilities can never decrease. 
 
 To improve numerical tractability, we assume that a period has two action stages. First effort levels are chosen, which don't impact state transitions and are therefore called static actions. Future vulnerability levels are chosen afterwards. We also assume that transfers are possible before every stage.
 
@@ -225,7 +229,7 @@ g = rel_game("Intensifying Relationship Game") %>%
 
 It is easy to make mistakes when writing these functions, in particular `trans.fun` that determines state transitions. When developing these functions, I want to debug them and take a look at their arguments, like `ax.df` and the computed results. You could do this via the `debug` function, e.g. call `debug(trans.fun)` before specifying the game. Personally, I prefer to use restore points instead. That is why you see the call to `restore.point` at the beginning of each function. For usage, take a look the restore point [vignette](https://cran.r-project.org/web/packages/restorepoint/vignettes/Guide_restorepoint.html). 
 
-The following code finds an optimal simple SPE (and thereby the whole SPE payoff set) for a discount factor of $\delta=0.25$.
+The following code finds an optimal simple SPE (and thereby the whole SPE payoff set) for a discount factor of `delta=0.25`.
 
 ```r
 g = rel_spe(g, delta=0.25)
@@ -253,7 +257,7 @@ We see from the first row that in the initial state `0_0` both players make them
 
 Why does not a player decide to deviate and stay invulnerable and then benefit from a strong bargaining position against the other vulnerable player? Same answer as in our previous example: Pareto-optimal SPE can by assumption rule out any hold-up problem. Players just don't newly negotiate their relational contract and thus there is neither harm for a player by putting himself in a weaker future bargaining position nor a gain from putting oneself in a stronger future bargaining position. The only driver of state transitions in Pareto-optimal SPE in this example is that higher vulnerabilities allow better incentives and thus higher joint payoffs.
 
-We now solve for a RNE assuming a negotiation probability of $\rho=0.7$ and fixing the adjusted discount factor at 0.25. 
+We now solve for a RNE assuming a negotiation probability of `rho=0.7` and fixing the adjusted discount factor at 0.25. 
 
 ```r
 g = g %>%  rel_capped_rne(T=1000, adjusted.delta = 0.25, rho=0.7)
@@ -303,7 +307,7 @@ For a more complex game take a look at the following [arms race example](https:/
 
 Wow, you are still reading this post! In the final section, we want to study a classic hold-up model using the concepts of relational contracting.
 
-The game begins in period 1 in state `x_invest`, where player 1 chooses an investment level `inv` and bears the investment cost `0.7 * inv`. In Period 2 players can decide to trade or not. If both players agree to trade, players equally split a surplus of $S=inv$ and the game effectively ends. If not both players agree to trade, both get zero payoffs in the current period and can again decide to trade or not in the next period, and so on. 
+The game begins in period 1 in state `x_invest`, where player 1 chooses an investment level `inv` and bears the investment cost `0.7 * inv`. In Period 2 players can decide to trade or not. If both players agree to trade, players equally split a surplus of `S=inv` and the game effectively ends. If not both players agree to trade, both get zero payoffs in the current period and can again decide to trade or not in the next period, and so on. 
 As usual, at the beginning of each period players can transfer money to each other.
 
 The following code specifies the game.
