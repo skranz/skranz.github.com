@@ -15,7 +15,7 @@ Congress provides data on Tweets written by the IRA and [Facebook advertisement]
 
 I found it interesting to just look at the advertisements to good better intuition of how foreign influence campaigns are designed in a social-media society. But then I thought why not add a little bit gamification? So I wrote a small shiny app that you can find here:
 
-[http://fbquiz.econ.mathematik.uni-ulm.de/](http://fbquiz.econ.mathematik.uni-ulm.de/)
+[https://fbquiz.econ.mathematik.uni-ulm.de/](https://fbquiz.econ.mathematik.uni-ulm.de/)
 
 It is just a little quiz that shows in each round 2 Facebook ads bought by the IRA. You have to guess which ad had more clicks per impression... 
 
