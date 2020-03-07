@@ -11,9 +11,9 @@ In my view, one of the greatest developments during the last decade in economics
 
 I wrote a Shiny app that allows to search currently among more than 3000 articles that have an accessible data and code supplement. Just click here to use it:
 
-<a href="http://econ.mathematik.uni-ulm.de:3200/ejd/" target="_blank">http://econ.mathematik.uni-ulm.de:3200/ejd/</a>
+<a href="https://ejd.econ.mathematik.uni-ulm.de/" target="_blank">https://ejd.econ.mathematik.uni-ulm.de/</a>
 
-One can perform a keyword search among the abstract and title. The screenshot shows an example:
+(Note that I updated the link to have proper https.) One can perform a keyword search among the abstract and title. The screenshot shows an example:
 
 <img src="http://skranz.github.io/images/search.PNG" style="width: 100%; height: 100%">
 
