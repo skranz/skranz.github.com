@@ -18,7 +18,8 @@ html, body {
 }
 
 body {
-  color: #4a4a4a;
+/*  color: #4a4a4a; */
+  color: black;
   background-color: #fafbfc;
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 400;
