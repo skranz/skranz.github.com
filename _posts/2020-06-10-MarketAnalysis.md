@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Market Analysis with R Course (Interactive and Free)'
+title: 'Market Analysis Course (Interactive, Free and with much R)'
 cover: 
 date: 2020-06-10 19:00:00
 categories: r
