@@ -36,7 +36,11 @@ fs %>%
   group_by(journ) %>%
   mutate(num_art = n_distinct(id)) %>%
   filter(file_type=="r") %>%
-  summarize(num_art = first(num_art), num_with_r = n(), share_with_r=round((num_with_r / first(num_art))*100,2), ) %>%
+  summarize(
+    num_art = first(num_art),
+    num_with_r = n(),
+    share_with_r=round((num_with_r / first(num_art))*100,2)
+  ) %>%
   arrange(desc(share_with_r))
 ```
 
@@ -110,7 +114,8 @@ sum_dat = fs %>%
   arrange(year,desc(share))  
 
 library(ggplot2)
-ggplot(sum_dat, aes(x=year, y=share, color=file_type)) + geom_line(size=1.5) + scale_y_log10() + theme_bw()
+ggplot(sum_dat, aes(x=year, y=share, color=file_type)) +
+  geom_line(size=1.5) + scale_y_log10() + theme_bw()
 ```
 
 ![](FindingEconomicArticles3_files/figure-html/unnamed-chunk-4-1.svg)<!-- -->
