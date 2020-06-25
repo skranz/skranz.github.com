@@ -22,7 +22,10 @@ library(RSQLite)
 library(dbmisc)
 library(dplyr)
 db = dbConnect(RSQLite::SQLite(),"articles.sqlite") %>%
-  set.db.schemas(schema.file=system.file("schema/articles.yaml", package="EconJournalData"))
+  set.db.schemas(
+    schema.file=system.file("schema/articles.yaml",
+    package="EconJournalData")
+  )
 
 articles = dbGet(db,"article")
 fs = dbGet(db,"files_summary")
