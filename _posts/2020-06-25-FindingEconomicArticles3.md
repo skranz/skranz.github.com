@@ -121,7 +121,7 @@ ggplot(sum_dat, aes(x=year, y=share, color=file_type)) +
   geom_line(size=1.5) + scale_y_log10() + theme_bw()
 ```
 
-![](FindingEconomicArticles3_files/figure-html/unnamed-chunk-4-1.svg)<!-- -->
+<img src="http://skranz.github.io/images/prog_shares3.svg" style="max-width: 100%;>
 
 I also have a log file that anonymously stores data about which articles that have been clicked on. The code below shows the 20 most clicked on articles so far:
 
