@@ -7,7 +7,13 @@ categories: r
 tags: [R, shiny]
 ---
 
+
+
 Almost a year is now gone since I posted my last update about my shiny-powered search app. It allows to search among currently more than 5000 economic articles that have an accessible data and code supplement:
+
+### ! Server Currently Unavailable !
+
+**I was not aware that today my university performs repair works and electricity is turned off in the building where my server is hosted. I hope everything will be back online sometime on the 27th or 28th**
 
 [https://ejd.econ.mathematik.uni-ulm.de](https://ejd.econ.mathematik.uni-ulm.de)
 
