@@ -11,11 +11,9 @@ tags: [R, shiny]
 
 Almost a year is now gone since I posted my last update about my shiny-powered search app. It allows to search among currently more than 5000 economic articles that have an accessible data and code supplement:
 
-### ! Server Currently Unavailable !
-
-**I was not aware that today my university performs repair works and electricity is turned off in the building where my server is hosted. I hope everything will be back online sometime on the 27th or 28th**
-
 [https://ejd.econ.mathematik.uni-ulm.de](https://ejd.econ.mathematik.uni-ulm.de)
+
+(Note that the server was offline on June the 26th and 27th due a power outage. Its now online again)
 
 <br>
 <a href="https://ejd.econ.mathematik.uni-ulm.de"><img src="http://skranz.github.io/images/search3.PNG" style="width: 100%; height: 100%"></a>
