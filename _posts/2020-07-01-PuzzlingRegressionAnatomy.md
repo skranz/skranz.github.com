@@ -109,7 +109,7 @@ One of my intuitions is the following:
 
 > "By controlling for `x2`, we essentially subtract the variation that can be linearly explained by `x2` from `y`, i.e. up to an estimation error we subtract `beta2*x2`." 
 
-This interpretation suggests that approach A should work, but that approach fails to get a consistent estimate for `beta1`. So is the intuition above wrong? Not completely, but the qualification "up to an estimation error" can cause trouble. Consider the following code.
+This interpretation suggests that approach A should work, but that approach fails to get a consistent estimate for `beta1`. So is the intuition above wrong? Not completely, but the qualification "up to an estimation error" causes trouble for approach A. Consider the following code.
 
 
 ```r
