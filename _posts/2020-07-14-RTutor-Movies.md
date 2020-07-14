@@ -20,7 +20,7 @@ We want to instrument the number of views at a movie's premiere with weather cha
 
 I think it is a very nice econometric quiz to determine how one can causally estimate the social spillover effects using only a sequence of basic OLS regressions and one LASSO regression. (This paper was also one of the motivators for writing my [previous blog post on regression anatomy](https://skranz.github.io/r/2020/07/01/PuzzlingRegressionAnatomy.html).) 
 
-As part of her Bachelor Thesis at Ulm University, Lara Santak has created a very nice RTutor problem set that allows you to replicate the analysis in an interactive fashion in R. Like in previous RTutor problem sets, you can enter free R code in a web-based shiny app. The code will be automatically checked and you can get hints how to proceed. In addition you are challenged by multiple choice quizzes. While the causal identification strategy is explained more stringent in the original paper, the RTutor problem set nicely allows you to dive yourself into the very interesting data set. 
+As part of her Bachelor thesis at Ulm University, Lara Santak has created a very nice RTutor problem set that allows you to replicate the analysis in an interactive fashion in R. Like in previous RTutor problem sets, you can enter free R code in a web-based shiny app. The code will be automatically checked and you can get hints how to proceed. In addition you are challenged by multiple choice quizzes. While the causal identification strategy is explained more stringent in the original paper, the RTutor problem set nicely allows you to dive yourself into the very interesting data set. 
 
 You can test the problem set online on shinyapps.io:
 
