@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Solving Interactive R Exercises: RStudio Editor or a Shiny Web Interface?"
+title: "Solving Interactive R Exercises: RStudio Editor vs Shiny Web Interface"
 cover: 
 date: 2020-09-08 18:00:00
 categories: r
