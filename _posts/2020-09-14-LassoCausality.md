@@ -55,13 +55,13 @@ But if we don't have enough observations, we need some method to select the rele
 
 Let us study different approaches for variable selection using a Monte-Carlo simulation with the following data generating process for $y$ and $d$. (If Mathjax is not well rendered on a blog aggregator click [here](http://skranz.github.io/r/2020/09/14/LassoCausality.html#mathjax).)<a name="mathjax"></a>:
 
-\[
+$$
 y = \alpha d  + \sum_{k=1}^{K_c} \beta^{cy}_k {x^c_k}  + \sum_{k=1}^{K_y} \beta^y_k {x^y_k} + \varepsilon^y
-\]
+$$
 
-\[
+$$
 d = \sum_{k=1}^{K_c} \beta^{cd}_k {x^c_k}  + \sum_{k=1}^{K_e} \beta^e_k {x^e_k} + \varepsilon^d
-\]
+$$
 
 We have the following potential control variables that are all independently normally distributed from each other:
 
@@ -143,7 +143,10 @@ If we know which variables are the confounders, we can easily consistently estim
 
 From the machine learning toolbox, lasso regressions seem natural candidates to select relevant control variables. Consider a linear regression with $K$ standardized explanatory variables with corresponding estimators and residuals denoted by $\hat \beta$ and $\hat \varepsilon(\hat \beta)$, respectively. The lasso estimator solves the following optimization problem:
 
-  $$\min_{\hat \beta} \sum_{i=1}^n {\hat \varepsilon_i(\hat \beta)^2} + \lambda \sum_{k=1}^K {|\hat \beta_k|}$$
+$$
+\min_{\hat \beta} \sum_{i=1}^n {\hat \varepsilon_i(\hat \beta)^2} + \lambda \sum_{k=1}^K {|\hat \beta_k|}
+$$
+  
 The first term is just the sum of squared residuals, which the OLS estimator minimizes. The second term penalizes larger absolute values of the estimated coefficients. The penalty parameter $\lambda \gt 0$ will be chosen in an outer loop e.g. by cross-validation or using a criterion like the corrected AIC. Lasso estimates typically have many coefficients $\hat \beta_k$ equal to zero. In this sense the lasso estimator selects a subset of explanatory variables whose estimated coefficients are non-zero.
 
 But also the coefficients of the selected variables will be typically attenuated towards 0 because of the penalty term. The *post-lasso* estimator avoids this attenuation by simply performing an OLS estimation using all the selected variables from the lasso estimation. 
@@ -395,7 +398,8 @@ OK, one probably should not infer a bias from a single simulation run. Therefore
 ```r
 sim = readRDS("control_exo_sim.Rds")
 library(ggplot2)
-ggplot(sim, aes(x=alpha.hat, fill=reg)) + geom_density() + facet_wrap(~reg) + geom_vline(xintercept=1, alpha=0.7)  
+ggplot(sim, aes(x=alpha.hat, fill=reg)) + geom_density() +
+  facet_wrap(~reg) + geom_vline(xintercept=1, alpha=0.7)  
 ```
 <center>
 <img src="http://skranz.github.io/images/lassocausal/sim_dist.svg" style="max-width: 100%;">
@@ -471,7 +475,8 @@ The following code estimates both models again and also returns statistics about
 
 ```r
 set.seed(1)
-lasso_sim(alpha=1,n=700,Kc=50,Ke=50,Ky=50,Ku=700, models=c("gamlr_simple","rlasso_double_sel"))
+lasso_sim(alpha=1,n=700,Kc=50,Ke=50,Ky=50,Ku=700, 
+  models=c("gamlr_simple","rlasso_double_sel"))
 ```
 
 ```
@@ -488,10 +493,13 @@ Below we estimate two variants of the post double selection where we reduce a pa
 ```r
 set.seed(1)
 models = list(
-  rlasso_double_sel_c106 = list(lasso.fun="rlasso",type="double_sel", args=list(penalty=list(c=1.06))),
-  rlasso_double_sel_c100 = list(lasso.fun="rlasso",type="double_sel", args=list(penalty=list(c=1)))    
+  rlasso_double_sel_c106 = list(lasso.fun="rlasso",type="double_sel",
+    args=list(penalty=list(c=1.06))),
+  rlasso_double_sel_c100 = list(lasso.fun="rlasso",type="double_sel",
+    args=list(penalty=list(c=1)))    
 )
-lasso_sim(alpha=1,n=700,Kc=50,Ke=50,Ky=50,Ku=700,return.what = "details",models = models)
+lasso_sim(alpha=1,n=700,Kc=50,Ke=50,Ky=50,Ku=700,return.what = "details",
+  models = models)
 ```
 
 ```
@@ -532,7 +540,9 @@ Let's compare post double selection with a simple `gamlr` lasso selection in thi
 
 ```r
 set.seed(1)
-res = lasso_sim(alpha=1,n=100,Kc=10,Ke=10,Ky=5,Ku=20, beta.ed = 10, beta.ey = 0.5, beta.cd = 0.5, beta.cy = 10, models=c("gamlr_simple","rlasso_double_sel"))
+res = lasso_sim(alpha=1,n=100,Kc=10,Ke=10,Ky=5,Ku=20, beta.ed = 10,
+  beta.ey = 0.5, beta.cd = 0.5, beta.cy = 10,
+  models=c("gamlr_simple","rlasso_double_sel"))
 select(res, - coef)
 ```
 
