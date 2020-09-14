@@ -55,8 +55,14 @@ But if we don't have enough observations, we need some method to select the rele
 
 Let us study different approaches for variable selection using a Monte-Carlo simulation with the following data generating process for $y$ and $d$. (If Mathjax is not well rendered on a blog aggregator click [here](http://skranz.github.io/r/2020/09/14/LassoCausality.html#mathjax).)<a name="mathjax"></a>:
 
-$$y = \alpha d  + \sum_{k=1}^{K_c} \beta^{cy}_k {x^c_k}  + \sum_{k=1}^{K_y} \beta^y_k {x^y_k} + \varepsilon^y$$
-$$d = \sum_{k=1}^{K_c} \beta^{cd}_k {x^c_k}  + \sum_{k=1}^{K_e} \beta^e_k {x^e_k} + \varepsilon^d$$
+\[
+y = \alpha d  + \sum_{k=1}^{K_c} \beta^{cy}_k {x^c_k}  + \sum_{k=1}^{K_y} \beta^y_k {x^y_k} + \varepsilon^y
+\]
+
+\[
+d = \sum_{k=1}^{K_c} \beta^{cd}_k {x^c_k}  + \sum_{k=1}^{K_e} \beta^e_k {x^e_k} + \varepsilon^d
+\]
+
 We have the following potential control variables that are all independently normally distributed from each other:
 
  - $x^c_k$ is one of $K_c$ confounders that directly affect both $d$ and $y$. For a consistent OLS estimation of $\alpha$, we need to control for all confounders.
