@@ -7,7 +7,7 @@ categories: r
 tags: [R, RTutor, shiny]
 ---
 
-Most economists agree that putting a price on greenhouse gas emmissions either in form of emission certificates or a carbon tax should be the main instrument to combat climate change in a cost efficient manner. Sweden has introduced a steadily increasing Carbon tax in 1991 which reached in 2020 a level of 110 Euro per ton CO2, which makes it the highest carbon tax in the world. The tax applies to those sectors that are not covered by the EU emission trading system (mainly transport and residential heating).
+Most economists agree that putting a price on greenhouse gas emmissions either in form of emission certificates or a carbon tax should be the main instrument to combat climate change in a cost-efficient manner. Sweden has introduced a steadily increasing Carbon tax in 1991 which reached in 2020 a level of 110 Euro per ton CO2, which makes it the highest carbon tax in the world. The tax applies to those sectors that are not covered by the EU emission trading system (mainly transport and residential heating).
 
 Two important questions related to such a tax are:
 
