@@ -23,7 +23,7 @@ One can get a first idea by looking at the development over time for these two v
 
 However, obviously we don't know how those curves would have looked if Sweden would not have introduced the carbon tax. This means just looking at time trends does typically not show us the causal effect of a policy intervention.
 
-The article [Carbon Taxes an CO2 Emissions: Sweden as a case study](https://www.aeaweb.org/articles?id=10.1257/pol.20170144) (2019, AEJ: Economic Policy) by Julius J. Andersson estimates the causal effect of Sweden's CO2 tax on emissions in the transport sector using the [synthetic control model](https://en.wikipedia.org/wiki/Synthetic_control_method).
+The article [Carbon Taxes an CO2 Emissions: Sweden as a case study](https://www.aeaweb.org/articles?id=10.1257/pol.20170144) (2019, AEJ: Economic Policy) by Julius J. Andersson estimates the causal effect of Sweden's CO2 tax on emissions in the transport sector using the [synthetic control method](https://en.wikipedia.org/wiki/Synthetic_control_method).
 
 The key idea is to take as control group a *synthetic Sweden* constructed as a weighted sample of other countries. The country weights are determined in a nested optimization procedure that gives higher weights to countries that are in the pre-intervention period closer to Sweden with respect to certain explanatory variables, like GDP per capita or the share of urban population. Those explanatory variables are weighted such that the constructed synthetic Sweden well matches Sweden's time path of the pre-intervention emission levels.
 
