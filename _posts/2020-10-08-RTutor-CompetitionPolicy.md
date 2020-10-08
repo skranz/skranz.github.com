@@ -11,7 +11,7 @@ Competition authorities regularly decide (and often defend in legal courts) whet
 
 An important but tricky empirical question is how stricter competition policy or certain forms of industrial policy causally affect a country's economic development.
 
-As part of his Master Thesis at Ulm University, Julia Latzko has created a very nice [RTutor](https://github.com/skranz/RTutor) problem set that allows you to replicate two great empirical studies on this topic in an interactive fashion. Like in previous RTutor problem sets, you can enter free R code in a web-based shiny app. The code will be automatically checked and you can get hints how to proceed. 
+As part of his Master Thesis at Ulm University, Julian Latzko has created a very nice [RTutor](https://github.com/skranz/RTutor) problem set that allows you to replicate two great empirical studies on this topic in an interactive fashion. Like in previous RTutor problem sets, you can enter free R code in a web-based shiny app. The code will be automatically checked and you can get hints how to proceed. 
 
 You can test the problem set online on shinyapps.io
 
