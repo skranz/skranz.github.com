@@ -19,7 +19,7 @@ The sample vaccine efficacy can be defined as
 $$VE = 1-IRR = 1 - \frac{c_v/n_v}{c_p/n_p}$$
 
 
-where $n_v$ and $n_p$ are the number of subjects that got a Covid-19 vaccine and a placebo, respectively, while $c_v$ and $c_p$ are the respective number of subjects that got the Covid-19 disease. IRR stands for incidence rate ratio and measures the ratio of the share of vaccinated subjects that got Covid-19 to the share in the placebo group.
+where $n_v$ and $n_p$ are the number of subjects that got a Covid-19 vaccine and a placebo, respectively, while $c_v$ and $c_p$ are the respective number of subjects that fell ill to the Covid-19 disease. IRR stands for incidence rate ratio and measures the ratio of the share of vaccinated subjects that got Covid-19 to the share in the placebo group.
 
 The press release stated that so far 38955 subjects got the two doses of the vaccine or placebo of which 94 subjects fell ill with Covid-19. Furthermore, the study plan stated that the same number of subjects was assigned to the treatment and control group and let's assume that also in the 38955 subjects analysed so far the ratio is almost equal. An efficacy of at least 90% then implies that from the 94 subjects with Covid-19 at most 8 could have been vaccinated.
 
