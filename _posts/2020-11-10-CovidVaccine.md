@@ -9,7 +9,7 @@ tags: [R]
 
 Probably, many of you have read the positive news from the Biontech/Pfizer [press release](https://investors.biontech.de/news-releases/news-release-details/pfizer-and-biontech-announce-vaccine-candidate-against-covid-19) from November 9th:
 
-> Vaccine candidate was found to be more than 90% effective in preventing COVID-19 in participants without evidence of prior SARS-CoV-2 infection in the first interim efficacy analysis
+> "Vaccine candidate was found to be more than 90% effective in preventing COVID-19 in participants without evidence of prior SARS-CoV-2 infection in the first interim efficacy analysis"
 
 Not being a biostatistician, I was curious how vaccine efficacy is exactly measured. Also, how does the confidence interval look like? Helpfully, Biontech and Pfizer also published a detailed study plan [here](https://pfe-pfizercom-d8-prod.s3.amazonaws.com/2020-09/C4591001_Clinical_Protocol.pdf).
 
@@ -141,11 +141,11 @@ Looks even better.
 
 However, those confidence intervals assume a finished, non-adaptive experiment. Yet, the interim evaluations are triggered when the number of Covid-19 cases among the subjects exceeds certain thresholds. The press release states:
 
-> After discussion with the FDA, the companies recently elected to drop the 32-case interim analysis and conduct the first interim analysis at a minimum of 62 cases. Upon the conclusion of those discussions, the evaluable case count reached 94 and the DMC performed its first analysis on all cases.  
+> "After discussion with the FDA, the companies recently elected to drop the 32-case interim analysis and conduct the first interim analysis at a minimum of 62 cases. Upon the conclusion of those discussions, the evaluable case count reached 94 and the DMC performed its first analysis on all cases." 
 
 <span></span>
 
-> The trial is continuing to enroll and is expected to continue through the final analysis when a total of 164 confirmed COVID-19 cases have accrued.
+> "The trial is continuing to enroll and is expected to continue through the final analysis when a total of 164 confirmed COVID-19 cases have accrued."
 
 I am no expert, but possible the calculation of the confidence interval is not valid for such adaptive rules where the evaluation is triggered by the number of disease cases. 
 
