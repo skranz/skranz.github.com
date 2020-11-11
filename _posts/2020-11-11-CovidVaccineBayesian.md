@@ -28,14 +28,17 @@ $$\theta = \frac {1-VE} {2-VE}$$
 Plugging in the definition of the population vaccine efficacy VE, we can rewrite $\theta$ as
 
 $$\theta = \frac {\pi_v} {\pi_v+\pi_c}$$
+
 Given that Biontech/Pfizer assigned the same number of subjects to the treatment and control group, this $\theta$ should denote the probability that a subject who fell ill with Covid-19 is from the treatment group, while $1-\theta$ is the probability that the subject is from the control group.
 
 As we can see from the study plan, the assumed prior distribution of $\theta$ is a Beta distribution with shape parameters $a=a_0=0.700102$ and $b=b_0=1$. We see from the [description of the beta distribution](https://en.wikipedia.org/wiki/Beta_distribution) that the prior mean of $\theta$ is thus given by
 
 $$E(\theta) = \frac {a_0}  {a_0+b_0} = 0.4118$$
+
 Given that we have
 
 $$VE=\frac{1-2\theta}{1-\theta}$$
+
 The efficacy at the expected prior value of $\theta=0.4118$ is indeed 30% as stated by Biontech/Pfizer.
 
 The following plot shows the prior distribution for $\theta$
