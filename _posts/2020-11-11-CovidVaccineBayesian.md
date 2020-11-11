@@ -9,7 +9,7 @@ tags: [R]
 
 Let's take again a look at Biontech / Pfizers vaccine candiate for which a [press release](https://investors.biontech.de/news-releases/news-release-details/pfizer-and-biontech-announce-vaccine-candidate-against-covid-19) stated more than 90% efficacy. As noted in my [previous post](http://skranz.github.io/r/2020/11/10/CovidVaccine.html) Biontech/Pfizer actually use a Bayesian approach to assess the efficacy of their vaccine candiate.
 
-In their [study plan]((https://pfe-pfizercom-d8-prod.s3.amazonaws.com/2020-09/C4591001_Clinical_Protocol.pdf)), we find the following relatively short descriptions:
+In their [study plan]((https://pfe-pfizercom-d8-prod.s3.amazonaws.com/2020-09/C4591001_Clinical_Protocol.pdf#page=102)), we find the following relatively short descriptions:
 
 > "The criteria for success at an interim analysis are based on the posterior probability (ie, P[VE > 30%|data]) at the current number of cases. Overwhelming efficacy will be declared if the posterior probability is higher than the success threshold. The success threshold for each interim analysis will be calibrated to protect overall type I error at 2.5%."
 
