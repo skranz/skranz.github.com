@@ -43,7 +43,10 @@ The following plot shows the prior distribution for $\theta$
 ```r
 a0 = 0.700102; b0 = 1
 ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
-  stat_function(geom="area",fun = dbeta, n = 101, args = list(shape1 = a0, shape2 = b0), col="blue", fill="blue", alpha=0.5) +
+  stat_function(geom="area",fun = dbeta, n = 101,
+    args = list(shape1 = a0, shape2 = b0),
+    col="blue", fill="blue", alpha=0.5
+  ) +
   ylab("Prior Density") + xlab("theta") + geom_vline(xintercept=0.4118)+
   ggtitle("Prior on probability that a subject with Covid-19 was vaccinated")
 ```
@@ -60,7 +63,10 @@ For example, here is the posterior if we had a single observation of an ill subj
 ```r
 a = a0; b = b0+1
 ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
-  stat_function(geom="area",fun = dbeta, n = 101, args = list(shape1 = a, shape2 = b), col="blue", fill="blue", alpha=0.5) +
+  stat_function(geom="area",fun = dbeta, n = 101,
+    args = list(shape1 = a, shape2 = b),
+    col="blue", fill="blue", alpha=0.5
+  ) +
   xlab("theta") + ylab("density") + geom_vline(xintercept=a/(a+b)) +
   ggtitle("Posterior if single ill subject was in control group")
 ```
@@ -75,7 +81,10 @@ Here is the posterior if the single ill subject was vaccinated:
 ```r
 a = a0+1; b = b0
 ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
-  stat_function(geom="area",fun = dbeta, n = 101, args = list(shape1 = a, shape2 = b), col="blue", fill="blue", alpha=0.5) +
+  stat_function(geom="area",fun = dbeta, n = 101,
+    args = list(shape1 = a, shape2 = b),
+    col="blue", fill="blue", alpha=0.5
+  ) +
   xlab("theta") + ylab("density") + geom_vline(xintercept=a/(a+b)) +
   ggtitle("Posterior if a single ill subject was vaccinated")
 ```
@@ -92,7 +101,10 @@ We can easily compute and draw the posterior distribution for $\theta$ for this 
 ```r
 a = a0+8; b = b0+94-8
 ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
-  stat_function(geom="area",fun = dbeta, n = 101, args = list(shape1 = a, shape2 = b), col="blue", fill="blue", alpha=0.5) +
+  stat_function(geom="area",fun = dbeta, n = 101,
+    args = list(shape1 = a, shape2 = b),
+    col="blue", fill="blue", alpha=0.5
+  ) +
   xlab("theta") + ylab("density") + geom_vline(xintercept=a/(a+b)) +
   ggtitle("Posterior if 8 out of the 94 ill subjects were vaccinated")
 ```
