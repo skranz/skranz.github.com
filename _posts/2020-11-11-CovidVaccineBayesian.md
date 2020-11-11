@@ -11,7 +11,7 @@ Let's take again a look at Biontech / Pfizers vaccine candiate for which a [pres
 
 In their [study plan]((https://pfe-pfizercom-d8-prod.s3.amazonaws.com/2020-09/C4591001_Clinical_Protocol.pdf#page=102)) we find the following relatively short descriptions:
 
-> "The criteria for success at an interim analysis are based on the posterior probability (ie, P[VE &gt; 30%|data]) at the current number of cases. Overwhelming efficacy will be declared if the posterior probability is higher than the success threshold. The success threshold for each interim analysis will be calibrated to protect overall type I error at 2.5%."
+> "The criteria for success at an interim analysis are based on the posterior probability (ie, P[VE &gt; 30% | data]) at the current number of cases. Overwhelming efficacy will be declared if the posterior probability is higher than the success threshold. The success threshold for each interim analysis will be calibrated to protect overall type I error at 2.5%."
 
 > "Bayesian approaches require specification of a prior distribution for the possible values of the unknown vaccine effect, thereby accounting for uncertainty in its value. A minimally informative beta prior, beta(0.700102, 1), is proposed for θ = (1-VE)/(2-VE). The prior is centered at θ = 0.4118 (VE=30%) which can be considered pessimistic. The prior allows considerable uncertainty; the 95% interval for θ is (0.005, 0.964) and the corresponding 95% interval for VE is (-26.2, 0.995)."
 
