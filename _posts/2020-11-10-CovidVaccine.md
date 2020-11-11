@@ -152,4 +152,4 @@ However, those confidence intervals assume a finished, non-adaptive experiment. 
 
 I am no expert, but possible the calculation of the confidence interval is not valid for such adaptive rules where the evaluation is triggered by the number of disease cases. 
 
-Indeed, Biontech and Pfizer state that they will the assess the precision of the estimated vaccine efficacy using a Bayesian framework with a particular prior distribution described on [p. 102-103](https://pfe-pfizercom-d8-prod.s3.amazonaws.com/2020-09/C4591001_Clinical_Protocol.pdf#page=102) of their study plan. I dig deeper into this Bayesian analysis in a [second post](http://skranz.github.io/r/2020/11/11/CovidVaccineBayesian.html).
+Indeed, Biontech and Pfizer state that they will the assess the precision of the estimated vaccine efficacy using a Bayesian framework with a particular prior distribution described on [p. 102-103](https://pfe-pfizercom-d8-prod.s3.amazonaws.com/2020-09/C4591001_Clinical_Protocol.pdf#page=102) of their study plan. This [second post](http://skranz.github.io/r/2020/11/11/CovidVaccineBayesian.html) takes a look at this Bayesian analysis.
