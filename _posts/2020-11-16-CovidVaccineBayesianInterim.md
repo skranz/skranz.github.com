@@ -241,7 +241,7 @@ quantile(agg.remain$final.prob, 1-max.share.final.success)
 
 OK, I have not deeply checked that there is no mistake in the computation above, but we indeed get a required threshold for the final trial of 98.53%. If we round it, we must round it up to keep the total error rate bounded by 2.5%, which yields the 98.6% threshold used by Biontech/Pfizer. So possibly, we indeed have replicated the computations that formed their study plan. 
 
-Overall, I find this approach an intriguing mixture between Bayesian statistics and frequentist hypothesis testing. In some sense it feels like the Bayesian posterior distributions are used as frequentist test statistics whose distributions we establish by our simulation. 
+Overall, I consider this approach an intriguing mixture between Bayesian statistics and frequentist hypothesis testing. In some sense it feels like the Bayesian posterior distributions are used as frequentist test statistics whose distributions we establish by our simulation. 
 
 For the sake of simplicity, I have ignored that the interim analyses also have futility thresholds that can lead to an early stop of the trial. Accounting for this possibly will generate some slight slack in the threshold computed above. But likely the threshold will not change much because I imagine that there are only very few trials that would in some interim analyses be declared futile while (if futility is ignored) in later analyses be declared an overwhelming success.
 
