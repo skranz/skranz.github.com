@@ -201,7 +201,7 @@ quantile(agg$highest.prob, 0.975)
 
 This means we should accept the efficacy only if in one of the 5 analyses the posterior probability of a vaccine efficacy above 30% is above 99.22%. The more interim analyses we would run, the tougher would be this threshold.
 
-However, there is no reason to set the same threshold for all interim analyses and the final analyses. In their study plan Biontech/Pfizer set a tougher success threshold of 99.5% for the 4 interim analyses, but a lower threshold of 98.6% for the final analysis.
+However, there is no reason to set the same threshold for all interim analyses and the final analysis. In their study plan Biontech/Pfizer set a tougher success threshold of 99.5% for the 4 interim analyses, but a lower threshold of 98.6% for the final analysis.
 
 Let us see whether we also come up with the 98.6% threshold for the final analysis if we fix the interim thresholds at 99.5% and want to guarantee a total type I error rate of 2.5%:
 
