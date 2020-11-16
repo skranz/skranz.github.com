@@ -381,3 +381,14 @@ h3 {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
+
+blockquote { 
+  font-style: italic;
+  padding: 20px;
+  padding: 1.25rem;
+  border-left: 3px solid #30719d;
+  background: #f7f7f7;
+  color: #000; display:
+  inline-block;
+}
+

@@ -176,6 +176,9 @@ It is nice to see that this different prior has only a quite small impact on the
 
 While I typically was sceptical about Bayesian analysis because of the need to specify a prior distribution, I must say that in this example the Bayesian approach looks actually quite intuitive and nice. You should still take my analysis with a grain of salt, however. It is essentially just an educated guess of how Biontech/Pfizer actually performs the analysis. There may well be some statistical complications that I have overlooked.
 
-PS: I just learned about another, nice Blog series [here](https://ibecav.netlify.app/post/warpspeed-confidence-what-is-credible/) about Bayesian methods for analysing the Covid-19 vaccine trials. It illustrates also some advanced R packages like [runjags](https://cran.r-project.org/web/packages/runjags/index.html) that can be used for more complex Bayesian analyses.
+UPDATE (2020-11-16): One interesting issue I have not yet addressed is how to control for "multiple testing" in our Bayesian setting if one wants to allow that a trial success can already be determined at interim analyses. I have now written a [third post](http://skranz.github.io//r/2020/11/16/CovidVaccineBayesianInterim.html) that explores this topic. 
+
+
+PS: I also learned about another blog series [here](https://ibecav.netlify.app/post/warpspeed-confidence-what-is-credible/) about Bayesian methods for analysing the Covid-19 vaccine trials. It illustrates also some advanced R packages like [runjags](https://cran.r-project.org/web/packages/runjags/index.html) that can be used for more complex Bayesian analyses.
 
 
