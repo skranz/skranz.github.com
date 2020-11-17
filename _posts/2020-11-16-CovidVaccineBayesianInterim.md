@@ -111,7 +111,9 @@ dat
 ## # ... with 154 more rows
 ```
 
-Each row of the data frame corresponds to one potential interim analysis after `m` Covid-19 cases have been observed. The corresponding number of cases from vaccinated subjects `mv` and from control group subjects `mc` are random. The column `prob.above.VE.min` denotes the posterior probability that the vaccine efficacy is better than `VE.min = 30%` given the simulated interim data and Biontech/Pfizer's assumed prior characterized by the arguments `a0` and `b0`. You see how every additional Covid-19 case of a vaccinated subject reduces `prob.above.VE.min` while every additional Covid-19 case of a control group subject increases it.
+Each row of the data frame corresponds to one potential interim analysis after `m` Covid-19 cases have been observed. The corresponding number of cases from vaccinated subjects `mv` and from control group subjects `mc` are random. [Update 2020-11-17: The simulation ignores that if `mv` and `mc` increase asymmetrically, the ratio of the remaining healthy subjects in the treatment group vs control group can now slightly differ from the original 1:1 assignment. A more careful simulation should probably account for this effect. But given that there were a large number of subjects (43538) compared to our maximum case count (164, i.e. less than 0.38% of the number of subjects) this simplification hopefully does not matter much.]
+
+The column `prob.above.VE.min` denotes the posterior probability that the vaccine efficacy is better than `VE.min = 30%` given the simulated interim data and Biontech/Pfizer's assumed prior characterized by the arguments `a0` and `b0`. You see how every additional Covid-19 case of a vaccinated subject reduces `prob.above.VE.min` while every additional Covid-19 case of a control group subject increases it.
 
 Let us plot at these posterior probabilities of a vaccine effectiveness above 30% for all possible interim analyses and the final analysis for our simulated trial:
 
