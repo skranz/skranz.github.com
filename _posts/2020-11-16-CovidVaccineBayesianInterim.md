@@ -4,7 +4,7 @@ title: "More on Biontech/Pfizer's Covid-19 vaccine trial: Adjusting for interim 
 cover: 
 date: 2020-11-16 8:00:00
 categories: r
-tags: [R]
+tags: [R, Covid]
 ---
 
 Here is one more post about Biontech/Pfizer's [vaccine trial](https://investors.biontech.de/news-releases/news-release-details/pfizer-and-biontech-announce-vaccine-candidate-against-covid-19). That is because my previous two posts ([here](http://skranz.github.io/r/2020/11/10/CovidVaccine.html) and [here](http://skranz.github.io/r/2020/11/11/CovidVaccineBayesian.html)) have so far ignored one interesting topic: How do Biontech/Pfizer statistically account for interim analyses? Studying this topic gives us also general insights into how adaptive trial designs with multiple success conditions can be properly evaluated.

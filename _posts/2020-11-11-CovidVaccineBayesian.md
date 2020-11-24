@@ -4,7 +4,7 @@ title: "A look at Biontech/Pfizer's Bayesian analysis of their Covid-19 vaccine 
 cover: 
 date: 2020-11-11 10:00:00
 categories: r
-tags: [R]
+tags: [R,Covid]
 ---
 
 Let's take again a look at Biontech / Pfizers vaccine candiate for which a [press release](https://investors.biontech.de/news-releases/news-release-details/pfizer-and-biontech-announce-vaccine-candidate-against-covid-19) stated more than 90% efficacy. As noted in my [previous post](http://skranz.github.io/r/2020/11/10/CovidVaccine.html) Biontech/Pfizer actually use a Bayesian approach to assess the efficacy of their vaccine candiate.

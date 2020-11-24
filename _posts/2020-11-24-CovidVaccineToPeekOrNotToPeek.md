@@ -4,7 +4,7 @@ title: "To peek or not to peek after 32 cases? Exploring that question in Bionte
 cover: 
 date: 2020-11-24 8:00:00
 categories: r
-tags: [R]
+tags: [R,Covid]
 ---
 
 This is my 4th post about Biontech/Pfizer's Covid-19 vaccine trial. If you are missing background, please first look at my [2nd post](http://skranz.github.io/r/2020/11/10/CovidVaccine.html) and [3rd post](http://skranz.github.io/r/2020/11/11/CovidVaccineBayesian.html).

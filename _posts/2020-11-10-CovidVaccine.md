@@ -4,7 +4,7 @@ title: "About confidence intervals for the Biontech/Pfizer Covid-19 vaccine cand
 cover: 
 date: 2020-11-10 15:00:00
 categories: r
-tags: [R]
+tags: [R, Covid]
 ---
 
 Probably, many of you have read the positive news from the Biontech/Pfizer [press release](https://investors.biontech.de/news-releases/news-release-details/pfizer-and-biontech-announce-vaccine-candidate-against-covid-19) from November 9th:
