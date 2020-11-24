@@ -205,7 +205,8 @@ a:hover {
 }
 
 .post ul, .post ol {
-  margin-left: 2.35em;
+  /*margin-left: 2.35em;*/
+  margin-left: 0px;
   margin-bottom: 1.25em;
 }
 
@@ -389,8 +390,10 @@ blockquote {
   font-style: italic;
   padding-left: 1.25rem;
   padding-right: 10px;
-  padding-bottom: 4px;
-  padding-top: 4px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-bottom: 4px;
+  margin-top: 4px;
   /*padding: 1.25rem;*/
   border-left: 3px solid #30719d;
   background: #f7f7f7;
