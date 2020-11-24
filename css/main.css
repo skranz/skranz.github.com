@@ -387,8 +387,11 @@ h3 {
 
 blockquote { 
   font-style: italic;
-  padding: 20px;
-  padding: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  /*padding: 1.25rem;*/
   border-left: 3px solid #30719d;
   background: #f7f7f7;
   color: #000; display:
