@@ -23,7 +23,7 @@ This post first performs several educated guesses to reverse-engineer the underl
 Let `s1` denote the share of the 131 Covid cases that accrued in the first dosage regimen. If we ignore rounding errors in the stated efficacy, we can compute it from the equation that determines the average efficacy of 70% of both dosage regimens by solving
 
 ```
-0.9 * s1 + 0.62*(1-s_1) = 0.7
+0.9 * s1 + 0.62 * (1-s1) = 0.7
 ```
 
 which yields `s1 = 2/7 = 28.6%`.
