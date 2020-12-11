@@ -9,7 +9,7 @@ tags: [R, Covid]
 
 Personally, I think it was a great decision of the FDA to make the material of their important meeting for the Emergency Use Authorization of the Biontech/Pfizer vaccine [publicly available](https://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-december-10-2020-meeting-announcement). In particular, they published the whole meeting as a [YouTube video](https://www.youtube.com/watch?v=owveMJBTc2I), which contains very interesting presentations.
 
-(I hope the EMA will be similar transparent so that the interested public can understand which additional investigations are performed that likely cause the vaccine to be available only at a later date in the EU. This would allow to better assess whether also a faster Emergency Use Authorization may be sensible for the EU should the next pandemic arrive.)
+(I hope the EMA will, perhaps later in less stressful times, be similar transparent so that the interested public can understand which additional investigations were performed that likely will have caused the vaccine to be available only at a later date in the EU. This would allow to better assess whether also a faster Emergency Use Authorization may be sensible for the EU should the next pandemic arrive.)
 
 But let us ignore for a moment big important questions and just consider a small statistical quiz for recreation. Take a look at Pfizer's explanation of the 95% CI `(90.3, 97.6)` for the vaccine efficacy at around [4 hours 50 minutes of the meeting video](https://www.youtube.com/watch?v=owveMJBTc2I&t=4h50m25s) where the presenter states: 
 
