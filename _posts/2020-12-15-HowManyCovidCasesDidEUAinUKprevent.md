@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How many Covid cases and deaths did UK's fast vaccine authorization save?"
+title: "How many Covid cases and deaths did UK's fast vaccine authorization prevent?"
 cover: 
 date: 2020-12-15 18:00:00
 categories: r
