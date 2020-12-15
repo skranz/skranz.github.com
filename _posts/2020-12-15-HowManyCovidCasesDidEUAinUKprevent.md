@@ -335,7 +335,7 @@ We certainly cannot rule out the possibility of rare, very severe side effects. 
 
 > They are understood to have had an anaphylactoid reaction, which tends to involve a skin rash, breathlessness and sometimes a drop in blood pressure. This is not the same as anaphylaxis which can be fatal.
 
-Some commentators argue that it was situations like these that the EU wanted to avoid by more thorough investigations. But even if the two allergic reactions would have been life threatening, why should we give them so much, much more weight than at least likely 54 prevented deaths from starting the vaccination earlier? Also, it is not clear how more thorough investigations would have found out about these allergic reactions. No very strong reactions seem to have occurred in the roughly 22000 subjects that got the vaccine in the phase III trial. 
+Some commentators argue that it was situations like these that the EU wanted to avoid by more thorough investigations. But even if the two allergic reactions would have been life threatening, why should we give them so much, much more weight than at least likely 54 prevented deaths from starting the vaccination earlier? Also, it is not clear how more thorough investigations would have found out about these allergic reactions. No very strong such reactions seem to have occurred in the roughly 22000 subjects that got the vaccine in the phase III trial. 
 
 Of course, if the politicians of the EU member states coordinated on the more time consuming conditional marketing authorization instead of a faster EUA, the EMA has to follow this procedure.
 
