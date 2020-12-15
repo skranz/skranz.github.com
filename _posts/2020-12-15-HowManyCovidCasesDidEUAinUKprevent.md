@@ -235,7 +235,7 @@ daily.deaths
 ## [1] 440.1538
 ```
 
-To compute the number of directly prevented deaths, we first estimate the daily death probability for inhabitants that not yet have had a confirmed Covid-19 case. We then multiply by it by the number of early vaccinated persons, the 21 days head-start and the assumed vaccine efficiency of 95%:
+To compute the number of directly prevented deaths, we first estimate the daily death probability for inhabitants that not yet have had a confirmed Covid-19 case. We then multiply it by the number of early vaccinated persons, the 21 days head-start and the assumed vaccine efficiency of 95%:
 
 
 ```r
