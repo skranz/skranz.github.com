@@ -50,7 +50,7 @@ ggplot(dat, aes(x=date,y=newcases)) + geom_line(col="blue") +
 
 The data shows the officially confirmed number of cases. The true number of cases is larger because not every Covid-19 case is detected. For example, the much larger case number in autumn compared to spring reflects to a large extend the larger number of tests.
 
-We first want to make a rough guess about the daily probability to get infected with Covid-19. The lower the assumed infection probability, the lower will be the number of cases prevented by an earlier start of vaccinations. We will just take the number of *confirmed* cases, which should yield a conservative, low estimate of the infection probability. As an approximation for the relevant daily cases, let us take the mean daily cases for the first days in December contained in our data set:
+We first want to make a rough guess about the daily probability to get infected with Covid-19. (As an economist I am here a bit sloppy and probably do not properly distinguish between getting infected with the Corona virus and getting the Covid-19 disease). The lower the assumed infection probability, the lower will be the number of cases prevented by an earlier start of vaccinations. We will just take the number of *confirmed* cases, which should yield a conservative, low estimate of the infection probability. As an approximation for the relevant daily cases, let us take the mean daily cases for the first days in December contained in our data set:
 
 
 ```r
