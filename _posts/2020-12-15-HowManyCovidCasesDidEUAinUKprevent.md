@@ -12,7 +12,7 @@ The UK approved on December 2nd, as first country in the world, the emergency us
 
 Neither the European Union nor any of its member states chose an EUA but rather opted to wait for the decision on a more extensive [conditional marketing authorization](https://ec.europa.eu/commission/presscorner/detail/en/QANDA_20_2390), which requires more thorough, more time consuming investigations. Most news currently report that vaccinations are estimated to start in the EU in the beginning of January, so roughly one month later than in the UK. 
 
-Note that also the UK must still adhere in 2020 to EU regulations but EU law does not forbid member states to grant an EUA (even though it seems politically discouraged). So it is not true that the EUA for the UK was only possible because of the Brexit.
+Note that also the UK must still adhere in 2020 to EU regulations but EU law does not forbid member states to grant an EUA (even though it may be politically discouraged). So it is not true that the EUA for the UK was only possible because of the Brexit.
 
 The choice between an earlier EUA vs a later approval is a trade-off between risks and benefits. Two measures of benefit are the expected numbers of avoided Covid-19 cases and deaths. Nobody knows these numbers, but in this post I try to make some very rough estimations.
 
