@@ -327,7 +327,7 @@ prevented.deaths
 
 ## Discussion and Opinion
 
-Our estimates are between 54 and 225 prevented Covid-19 deaths due to the early vaccination. While it is less than the average UK Covid-19 deaths on an early December day, it still a considerable number. I also feel that the assumptions I made in this exercise led to quite conservatively, low estimates.
+Our estimates are between 54 and 225 prevented Covid-19 deaths due to the early vaccination. While it is less than the average UK Covid-19 deaths on an early December day, it still a considerable number. I also feel that the assumptions I made in this exercise led to quite conservatively low estimates.
 
 Does this expected number of avoided deaths and the larger expected number of avoided cases outweigh the risks from an earlier EUA? As far I have followed the available information about possible risks and side effects, my *non-expert opinion* would be a *clear yes*.
 
