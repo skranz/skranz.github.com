@@ -14,7 +14,7 @@ Neither the European Union nor any of its member states chose an EUA but rather 
 
 Note that also the UK must still adhere in 2020 to EU regulations but EU law does not forbid member states to grant an EUA (even though it may be politically discouraged). So it is not true that the EUA for the UK was only possible because of the Brexit.
 
-The choice between an earlier EUA vs a later approval is a trade-off between risks and benefits. Two measures of benefit are the expected numbers of avoided Covid-19 cases and deaths. Nobody knows these numbers, but in this post I try to make some very rough estimations.
+The choice between an earlier EUA vs a later approval is a trade-off between risks and benefits. Two measures of benefit are the expected numbers of avoided Covid-19 cases and deaths. Nobody knows these numbers, but in this post I try to make some very rough, conservative estimates.
 
 There are many data sources for confirmed Covid-19 cases. One popular source are [the statistics compiled by the John Hopkins University](https://github.com/CSSEGISandData/COVID-19). The same data is accessible in a more tidy format on the [Github page](https://github.com/RamiKrispin/coronavirus/tree/master/csv) of the R package `coronavirus`.
 
