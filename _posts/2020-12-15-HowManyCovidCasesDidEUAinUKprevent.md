@@ -223,7 +223,7 @@ ggplot(dat, aes(x=date,y=death)) + geom_line(col="black") +
 <img src="http://skranz.github.io/images/covid/deaths_uk.svg" style="max-width: 100%; margin-bottom: 0.5em;">
 </center>
 
-To compute the number of Covid-19 deaths prevented from the early EUA vaccinations, we proceed in similar steps than for the Covid-19 cases. We first approximate the number of daily deaths by the average reported number for the days in December 2020:
+To compute the number of Covid-19 deaths prevented from the early EUA vaccinations, we proceed in similar steps as for the Covid-19 cases. We first approximate the number of daily deaths by the average reported number for the days in December 2020:
 
 
 ```r
