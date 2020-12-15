@@ -10,7 +10,9 @@ tags: [R, Covid]
 
 The UK approved on December 2nd, as first country in the world, the emergency use authorization (EUA) of Biontech/Pfizer's Covid-19 vaccination. A few days later on December 8th, the first NHS patient became vaccinated.
 
-Neither the European Union nor any of its member states chose an EUA but rather opted to wait for the decision on a more extensive [conditional marketing authorization](https://ec.europa.eu/commission/presscorner/detail/en/QANDA_20_2390), which requires more thorough, more time consuming investigations. Most news currently report that vaccinations are estimated to start in the EU in the beginning of January, so roughly one month later than in the UK. 
+Neither the European Union nor any of its member states chose an EUA but rather opted to wait for the decision on a more extensive [conditional marketing authorization](https://ec.europa.eu/commission/presscorner/detail/en/QANDA_20_2390), which requires more thorough, more time consuming investigations. Most news currently report that vaccinations are estimated to start in the EU in the beginning of January, so roughly one month later than in the UK.
+
+*[Update 2020-12-15 19:00] Good news (just after I submitted the post). It seems now as if also EU vaccine authorization may come a bit earlier than expected on 21st of December (see e.g. [here](https://www.theguardian.com/society/2020/dec/15/germany-to-begin-vaccinating-against-covid-within-two-weeks)). So you may adapt the calculations below accordingly or just keep the old expected date as comparison benchmark.*
 
 Note that also the UK must still adhere in 2020 to EU regulations but EU law does not forbid member states to grant an EUA (even though it may be politically discouraged). So it is not true that the EUA for the UK was only possible because of the Brexit.
 
