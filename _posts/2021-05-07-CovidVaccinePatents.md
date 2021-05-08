@@ -88,3 +88,4 @@ So for the pharmaceutical sector, I would again agree with the statement of the 
 
 > The protection of intellectual property is a source of innovation and this has to remain so in the future.
 
+Update: I found today this interesting [blog post](https://marginalrevolution.com/marginalrevolution/2021/05/ip-is-not-the-constraint.html) that is also critical about Covid-19 patent waivers. It also has good links on some of the supply bottlenecks.
