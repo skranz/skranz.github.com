@@ -193,9 +193,8 @@ show.plot(dat,show.means = FALSE)
 </center>
 
 Hmm, the resulting pre-trends don't look very parallel. Indeed, this residual approach does not work. For some intuition about what is going wrong, you can take a look at [my earlier post about regression anatomy](http://skranz.github.io/r/2020/07/01/PuzzlingRegressionAnatomy.html). 
-
-## Correct approach (I hope) for trend plots adjusted for control variables
 <a id="plot"></a>
+## Correct approach (I hope) for trends plot adjusted for control variables
 
 Here is an approach that seems to work. We first estimate the complete DID regression including the additional control variables. Then we predict the outcomes for treatment and control groups assuming that the control variables don't change over time. We also add the residuals of the original regressions:
 
