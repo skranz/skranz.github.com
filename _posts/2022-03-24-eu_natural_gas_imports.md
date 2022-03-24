@@ -56,7 +56,7 @@ Th following figure shows the average monthly prices from 2021 onward relative t
 
 In March 2022 natural gas prices on the dutch TTF hub were almost 9 times higher as the average price from 2018-2020. If prices would stay so high (unlikely given the drop a few days after the invasion) and also carry over to Gazprom's long-term delivery contracts (discussed below), even a reduction of Russian's natural gas exports to 25% of the pre-war levels could mean twice as much yearly revenues than the average in the years 2018 to 2020.
 
-It is not easy to determine which part of the price increases, starting already in 2021, are caused by Putin's aggressions. Also other factors like strongly increasing energy demand by China and India in 2021 that caused a huge increase in coal prices (see e.g. this [IEA report](https://www.iea.org/reports/coal-2021/executive-summary)), surely also play a role. For one comparison, the following plot shows the development of natural gas prices in the US:
+It is not easy to determine which part of the price increase, starting already in 2021, is caused by Putin's aggressions. Also other factors like strongly increasing energy demand by China and India in 2021 that caused a huge increase in coal prices (see e.g. this [IEA report](https://www.iea.org/reports/coal-2021/executive-summary)), surely also play a role. For one comparison, the following plot shows the development of natural gas prices in the US:
 
 <center>
 <img src="https://skranz.github.io/images/gasus_price.svg" style="max-width: 100%;margin-bottom: 0.5em;">
@@ -126,7 +126,7 @@ The tariff income could be used to partly reduce the burden of high energy price
 
 I honestly don't know, how quickly such a tariff can be implemented and don't know all legal implications.
 
-An important aspect is that it would not suffice to only subject new contracts and spot market traded to such a tariff but also existing long-term contracts in a way that Gazprom only receives the contracted price minus the tariff. Otherwise, the payments Russia receives for its long-term contracts would even increase as such a tariff likely increases long-term spot prices.
+An important aspect is that it would not suffice to only subject new contracts and spot market trades to such a tariff but also existing long-term contracts in a way that Gazprom only receives the contracted price minus the tariff. Otherwise, the payments Russia receives for its long-term contracts would even increase as such a tariff likely increases long-term spot prices.
 
 In essence, this would mean the EU declares to pay a lower price per unit delivered natural has than is contracted in the long-term contracts. This could be interpreted as a breach of the contracts. However, with such a step the EU may not have been the first party to breach the long-term contracts. On March 23rd Russia announced that it will only accept payment in Rubles for its natural gas deliveries, which many observers already interpret as a breach of the long-term contracts (see e.g. [this Politico article](https://www.politico.eu/article/rubles-for-gas-russia-vladimir-putin-trolls-the-west-energy-economy/)).
 
