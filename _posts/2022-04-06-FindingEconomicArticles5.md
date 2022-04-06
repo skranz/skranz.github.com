@@ -11,7 +11,7 @@ If you want to find reproducible empirical economic studies that are about some 
 
 [https://ejd.econ.mathematik.uni-ulm.de](https://ejd.econ.mathematik.uni-ulm.de)
 
-I just included a small new feature: one can specify search terms as an URL parameter. For example, assume you are interested in new reproducible articles on the topics `labor` and `climate change`. You could the bookmark this URL:
+I just included a small new feature: one can specify search terms as an URL parameter. For example, assume you are interested in new reproducible articles on the topics `labor` and `climate change`. You could then bookmark this URL:
 
 [https://ejd.econ.mathematik.uni-ulm.de?search=labor,"climate change"&sortby=date](https://ejd.econ.mathematik.uni-ulm.de?search=labor,"climate change"&sortby=date)
 
