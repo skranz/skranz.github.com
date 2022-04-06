@@ -21,4 +21,4 @@ If you leave out the argument `sortby=date`, articles are ordered by how often t
 
 [https://ejd.econ.mathematik.uni-ulm.de?search=labor,"climate change"](https://ejd.econ.mathematik.uni-ulm.de?search=labor,"climate change")
 
-That's all. I hope the app and the new feature is useful.
+That's all. I hope the app and the new feature are useful.
