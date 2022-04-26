@@ -9,7 +9,7 @@ tags: [R, RTutor, shiny]
 
 How did changes in life and emotional states affect the creativity and output of the great composers Mozart, Beethoven and Liszt? (Yeah, 3 composers are studied but Mozart seems to sell best, so he is in the title.) In his great article [How Are You, My Dearest Mozart? Well-Being and Creativity of Three Famous Composers Based on Their Letters](https://doi.org/10.1162/REST_a_00616) (ReStat 2017) Karol Jan Borowiecki studies this question using a unique database of works, bibliographic data and most importantly 1400 letters of the three composers.
 
-As part of her Bachelor Thesis at Ulm University, Daniel Klink has created a very nice [RTutor](https://github.com/skranz/RTutor) problem set that allows you to replicate key findings of this analysis in an interactive fashion. In chapter 4 you will dig into the statistical text analysis of the composers' letters using the modern R package [quanteda](https://quanteda.io/) to extract their emotional states during different periods of their lives.
+As part of her Bachelor Thesis at Ulm University, Daniel Klinke has created a very nice [RTutor](https://github.com/skranz/RTutor) problem set that allows you to replicate key findings of this analysis in an interactive fashion. In chapter 4 you will dig into the statistical text analysis of the composers' letters using the modern R package [quanteda](https://quanteda.io/) to extract their emotional states during different periods of their lives.
 
 Before, you get a descriptive overview of the emotional states and output over the composers' live, as in the following screenshot:
 
