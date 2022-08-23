@@ -2,92 +2,63 @@
 layout: post
 title: "Exploding German Electricity Prices: Some Time Series"
 cover: 
-date:   2022-01-14 10:00:00
+date: 2022-08-23 15:30:00
 categories: r
-tags: [R, shiny, RTutor]
-output: 
-  html_document: 
-    keep_md: yes
-    df_print: kable
+tags: [R, energy]
 ---
-
-```{r "setup", include=FALSE}
-knitr::opts_chunk$set(dev="svg", echo=FALSE)
-options(dplyr.summarise.inform = FALSE)
-library(ggplot2)
-library(dplyr)
-library(patchwork)
-```
 
 
 German wholesale electricity prices in August 2022 are extremely high with an average of 397 Euro / MWh (EPEX day ahead prices until 19th of August). That is more than 10 fold the average prices in 2019 (38.3 Euro / MWh) and 2020 (31 Euro / MWh). There are several reasons. The [NY times summarizes here](https://www.nytimes.com/2022/08/18/world/europe/drought-heat-energy.html):
 
 > The dry summer has reduced hydropower in Norway, threatened nuclear reactors in France and crimped coal transport in Germany. And that’s on top of Russian gas cuts.
 
-To get a better quantitative intuition, I collected some long run time series data (available [here](https://github.com/skranz/skranz.github.com/blob/master/data/daily_prices.Rds) and want to present it in this post. Here is a first glimpse at the data set :
+To get a better quantitative intuition, I collected some long run time series data and want to present it in this post. Here is a first glimpse at the data set:
 
-```{r}
-pd = readRDS("daily_prices.Rds")
-bind_rows(
-  head(pd,3),
-  tail(pd,3)
-)
+```
+##   date       co2_eur_t el_eur_mwh gas_eur_mwh coal_eur_mwh oil_eur_mwh usd_eur
+## 1 2011-01-01      NA         22.0        NA           NA          NA     NA   
+## 2 2011-01-02      NA         44.5        NA           NA          NA     NA   
+## 3 2011-01-03      20.0       61.6        24.0         15.3        42.0    1.34
+## 4 2022-08-17      96.4      555.        226.          60.7        52.5    1.02
+## 5 2022-08-18      96.5      569.        241.          61.2        53.2    1.01
+## 6 2022-08-19      98.4      506.        245.          61.9        55.3    1.00
 ```
 
-The daily data from 2011 to August 18th 2022 contains the price of EU carbon certificates, German electricity prices, and fuel prices converted to Euro per MWh thermal energy for European natural gas, hard coal and crude oil. The appendix gives more insight how this data set was collected.
+(I have omitted the R code in this post. The RMarkdown document with code is [here](https://github.com/skranz/skranz.github.com/blob/master/rmd/electricity_prices.Rmd))
+
+The daily data from 2011 to August 18th 2022 contains the price of EU carbon certificates, German electricity prices, and fuel prices converted to Euro per MWh thermal energy for European natural gas, hard coal and crude oil. The appendix gives more insight how this data set was collected. You can download the data set [here](https://github.com/skranz/skranz.github.com/blob/master/data/daily_prices.Rds).
 
 Let us look at 4 time series using for better visualization weekly aggregated data:
-```{r "fourplots"}
-# Aggregate to weekly data
-pw = pd %>%
-  mutate(weekind = ceiling((1:n()) / 7)) %>%
-  select(date, weekind, everything()) %>%
-  group_by(weekind) %>%
-  summarize(
-    date = first(date),    
-    across(co2_eur_t:usd_eur, ~mean(.,na.rm=TRUE))
-  )
 
-
-library(ggplot2)
-p1 = ggplot(pw, aes(x=date, y=el_eur_mwh)) + 
-  ggtitle("German electricity prices") +
-  ylab("Euro / MWh") + xlab("") +
-  geom_line(size=1) + theme_bw() 
-
-p2 = ggplot(pw, aes(x=date, y=co2_eur_t)) +
-  ggtitle("EU Carbon Allowance price") +
-  ylab("Euro / tCO2") + xlab("") +
-  geom_line(size=1) + theme_bw() 
-
-p3 = ggplot(pw, aes(x=date, y=gas_eur_mwh)) +
-  ggtitle("Natural Gas Price (Dutch TTF)") +
-  ylab("Euro / MWh") + xlab("") +
-  geom_line(size=1) + theme_bw()
-
-p4 = ggplot(pw, aes(x=date, y=coal_eur_mwh)) +
-  ggtitle("Coal Price (Newcastle Coal Index)") +
-  ylab("Euro / MWh") + xlab("") +
-  geom_line(size=1) + theme_bw()
-
-# Use patchwork library to arrange the
-# separate plots in a grid
-library(patchwork)
-p1+p2 +p3+p4
-```
+<center>
+<img src="https://skranz.github.io/images/elprices/fourplots-1.svg" style="max-width: 100%;margin-bottom: 0.5em;">
+</center>
 
 Not only electricity and natural gas prices have massively gone up in 2022 (starting already 2021), but also coal and carbon prices increased. To get a better insight into the relative importance of the different fuel prices and the carbon prices for the electricity price increase, I want to compute the time series of approximate variable cost for different power plant types using the simple formula:
 
+```
 variable cost = fuel cost + cost of carbon allowances
+```
 
 For that calculation, we need some technical power plant data, like efficiency and carbon emissions. Such numbers for representative plants are regularly specified in energy market models. The following data set uses the specifications from the [DIW energy market model Dieter](https://www.diw.de/de/diw_01.c.599753.de/modelle.html#c_803498):
 
-```{r}
-plants = read.csv("plants_diw2020.csv")
-plants
+```
+##       plant efficiency carbon_content
+## 1     hydro      0.900          0.000
+## 2   nuclear      0.337          0.000
+## 3   lignite      0.447          0.399
+## 4      coal      0.464          0.337
+## 5      CCGT      0.610          0.201
+## 6      OCGT      0.393          0.201
+## 7       oil      0.410          0.266
+## 8     other      0.537          0.269
+## 9       bio      0.468          0.000
+## 10  wind_on      1.000          0.000
+## 11 wind_off      1.000          0.000
+## 12       pv      1.000          0.000
 ```
 
-We will now compute for every week in our data set the approximate variable cost for 4 different plant types:
+Using that specificaion and the price data from above, we compute for every week in our data set the approximate variable cost for 4 different plant types:
 
   - Open Cycle Gas Turbine (OCGT)
   
@@ -97,42 +68,11 @@ We will now compute for every week in our data set the approximate variable cost
   
   - Oil power plant
 
-```{r}
-fuel.price.vars = c(OCGT="gas_eur_mwh", CCGT="gas_eur_mwh",
-                    coal="coal_eur_mwh",oil = "oil_eur_mwh")
-costs = lapply(c("OCGT","CCGT","coal","oil"),
-  function (.plant) {
-    p = filter(plants,plant==.plant)
-    pw$fuel_price = pw[[fuel.price.vars[[.plant]]]]
-    pw %>%
-      bind_cols(p) %>%
-      mutate(
-        vc_fuel = (fuel_price / efficiency),
-        vc_co2 = co2_eur_t * (carbon_content / efficiency),
-        vc = vc_fuel+vc_co2
-      ) %>%
-      select(date, plant, vc_fuel, vc_co2, vc, el_eur_mwh)
-  }) %>%
-  bind_rows() %>%
-  mutate(plant = ordered(plant,c("coal","CCGT","OCGT","oil")))
+We now plot the resulting approximated variable cost and compare it with the electricity price from 2011 to 2020, a period in which prices remained relatively stable:
 
-tail(costs,5)
-```
-
-We have shown just he last 5 rows of our data set that specifies for each plant type and each week variable cost estimates using the average fuel and carbon prices of that week.
-
-We first plot the approximated variable cost and compare it with the electricity price from 2011 to 2020 where prices still remained relatively stable:
-
-```{r "costs_2011_2020", fig.width=11}
-library(ggplot2)
-dat = costs %>% filter(date <= "2021-01-01")
-ggplot(dat, aes(x=date, y=vc, color=plant)) +
-  geom_line(aes(x=date, y=el_eur_mwh), col="grey", size=1) +
-  geom_line(size=1) + 
-  facet_wrap(~plant) +
-  theme_bw() +
-  ggtitle("Variable Cost vs Electricity Prices (2011-2020)")
-```
+<center>
+<img src="https://skranz.github.io/images/elprices/costs_2011_2020-1.svg" style="max-width: 100%;margin-bottom: 0.5em;">
+</center>
 
 We see how until 2018 variable costs of coal power plants were general below the average electricity prices and below the variable costs of combined cycle gas turbines (CCGT). Yet, with increasing carbon prices this ranking swapped as is particular visible in 2020.  
 
@@ -140,42 +80,25 @@ Note that the variable cost of the classic peak load plants open cycle gas turbi
 
 Let us now look at the same graph for the period from 2018 to August 2022:
 
-```{r "costs_2018_2022", fig.width=11}
-dat = costs %>% filter(date >= "2018-01-01")
-ggplot(dat, aes(x=date, y=vc, color=plant)) +
-  geom_line(aes(x=date, y=el_eur_mwh), col="grey", size=1) +
-  geom_line(size=1) + 
-  facet_wrap(~plant) +
-  theme_bw() +
-  ggtitle("Variable Cost vs Electricity Prices (2018-2022)")
-```
+
+<center>
+<img src="https://skranz.github.io/images/elprices/costs_2018_2022-1.svg" style="max-width: 100%;margin-bottom: 0.5em;">
+</center>
 
 Starting from the 2nd half of 2021 we see a massive increase in particular for the variable costs of peak load gas turbines (OCGT), reaching more than 600 Euro / MWh at the end of August. Also the variable costs of the more efficient combined cycle gas turbines reach 400 Euro / MWh. Indeed the variable cost of CCGT track quite well the average electricity prices. While the variable costs of coal plants have also strongly risen, the level of 200 Euro / MWh is substantially below that of the gas power plants. Interestingly, completely reversing the usual ranking, oil power plants had the lowest approximated variable costs at the end of our time series, slightly below 200 Euro / MWh. (As explained in the appendix, I did not get data for actual furnace oil prices and used crude oil prices instead. If furnace oil is more expensive, coal plans may actually still a bit cheaper than oil plants. Also there is very little capacity of oil power plants.)
 
 The following plot separates the variable cost into costs for carbon certificates (dark shaded) and fuel costs. We first limit the price axis between 0 and 100 Euro and show the years from 2015 onward:
 
-```{r "costs_co2_fuel_100", fig.width=11}
-dat = costs %>% filter(date >= "2015-01-01") 
-ggplot(dat, aes(x=date, y=vc, color=plant)) + 
-  geom_ribbon(aes(ymin=vc_co2,ymax=vc, fill=plant), alpha=0.5, color=NA)+
-  geom_ribbon(aes(ymin=0,ymax=vc_co2, fill=plant), color=NA)+
-  geom_line() +
-  facet_wrap(~plant) + theme_bw() +
-  ggtitle("Variable cost (dark shade: carbon cost)") +
-  coord_cartesian(ylim = c(0, 100)) 
-```
+
+<center>
+<img src="https://skranz.github.io/images/elprices/costs_co2_fuel_100-1.svg" style="max-width: 100%;margin-bottom: 0.5em;">
+</center>
 
 The plot shows that in *normal times* the increase in carbon cost from 2021 onward, would already be quite substantial. For coal the carbon cost in 2022 exceed the total variable costs before 2021. But let us now look at the same plot without limiting the price axis:
 
-```{r "costs_co2_fuel", fig.width=11}
-dat = costs %>% filter(date >= "2015-01-01") 
-ggplot(dat, aes(x=date, y=vc, color=plant)) + 
-  geom_ribbon(aes(ymin=vc_co2,ymax=vc, fill=plant), alpha=0.5, color=NA)+
-  geom_ribbon(aes(ymin=0,ymax=vc_co2, fill=plant), color=NA)+
-  geom_line() +
-  facet_wrap(~plant) + theme_bw() +
-  ggtitle("Variable cost (dark shade: carbon cost)") 
-```
+<center>
+<img src="https://skranz.github.io/images/elprices/costs_co2_fuel-1.svg" style="max-width: 100%;margin-bottom: 0.5em;">
+</center>
 
 We see how for OCGT and CCGT gas power plants, the increase in natural gas prices has much higher impact on the variable costs than the increase in carbon prices. Also for coal power plants the coal price increase seems more important than the carbon price increase even though the effects have a more similar size that for gas power plants.
 
@@ -184,7 +107,7 @@ We see how for OCGT and CCGT gas power plants, the increase in natural gas price
 I was not able to collect time series data on electricity future prices. Looking at the actual [EEX future prices](https://www.eex.com/en/market-data/power/futures#%7B%22snippetpicker%22%3A%22EEX%20German%20Power%20Future%22%7D) we find very high prices but very little trade. Here is a screenshot for the quarterly base load future prices:
 
 <center>
-<img src="https://skranz.github.io/images/eex_futures_aug_2022.png" style="max-width: 97%;margin-bottom: 0.5em;">
+<img src="https://skranz.github.io/images/elprices/eex_futures_aug_2022.png" style="max-width: 97%;margin-bottom: 0.5em;">
 <br>
 </center>
 
@@ -238,7 +161,8 @@ As far as I checked, the prices are already given in EUR / MWh, so no conversion
 
 I took crude oil prices from Yahoo finance using the following R code:
 
-```{r eval=FALSE, echo=TRUE}
+
+```r
 library(tidyquant)
 crude_oil = tq_get("CL=F",from = '2000-01-01',to = Sys.Date())
 crude_oil$oil_usd_mwh = crude_oil$open / 1.6282
