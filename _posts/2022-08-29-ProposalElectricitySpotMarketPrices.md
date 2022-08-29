@@ -44,13 +44,17 @@ which corresponds to a price of 29000 / 50 = 580 Euro / MWh.
 
 This means in this example the price cap reduces buyer expenditures by 42% compared to the current marginal cost pricing system. The money comes from a reduction of the infra-marginal rents of non-gas power plants. 
 
-## UPDATE [2022-09-28 13:30]: RISK OF A MONEY PUMP?
+## UPDATE [2022-09-28 15:00]: RISK OF A MONEY PUMP?
 
-I just got a very good remark on a potentially quite tricky problem (thanks Justus!). Under the proposed mechanism, gas power plant owners could buy gas cheaper than the price they get when selling gas. That might be used as a money pump for owners of gas power plants. (Below I also suggest that pump storage suppliers should get the same price than gas power plants, i.e. a similar problem would arise for storage owners). I have to think deeper about that issue, but it could indeed be very problematic for this mechanism. Possibly, the money pump risk does not allow to implement mechanisms where buyers pay a lower price than the price the marginal seller obtains.
+I just got a very good remark on a potentially quite tricky problem (thanks Justus!). 
 
-One possibly could think of the following modification of the mechanism. Buyers pay the marginal cost as price, i.e. in the example 1000 Euro / MWh, but non-gas plants still get at most the price cap. The extra earnings will be collected by the government that can use the money to support energy users (e.g. lump sum transfers based on historic electricity usage). The mechanism would then not reduce electricity prices but still collect some of the inframarginal rents to have money that is needed to suppport energy consumers.
+Under the proposed mechanism, gas power plant owners could buy gas cheaper than the price they get when selling gas. That might possibly provide incentives to buy and sell electricity at the same time in a form of money pump. Below I also suggest that pump storage suppliers should get the same price than gas power plants, i.e. a similar problem would arise for storage owners. Possibly the money pump problem is indeed only an issue for storage owners, since they are physically able to generate demand.
 
-I have to think about it more closely. Possibly I will update also other parts of the post later.
+This problem might be quite problematic for this mechanism. But it might not be as bad. I have to think deeper about that issue. 
+
+One always could think of the following modification of the mechanism. Buyers pay the marginal cost as price, i.e. in the example 1000 Euro / MWh, but non-gas plants still get at most the price cap. The extra earnings will be collected by the government that can use the money to support energy users (e.g. lump sum transfers based on historic electricity usage). The mechanism would then not reduce electricity prices but still collect some of the inframarginal rents to have money that is needed to suppport energy consumers.
+
+Possibly, I will update the post later again, with hopefully a better understanding on this issue.
 
 ## Discussion
 
