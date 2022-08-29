@@ -32,7 +32,7 @@ For simplicity, we assume the spot market trading is for periods of one hour and
 
 - CCGT (combined cycle gas turbine) gas power plants offer a supply of 10 MWh at a price of 600 Euro / MWh.
 
-- In addition OCGT (open cycle gas turbine) gas power plants offer a supply of 20 MWh at a price 1000 Euro / MWh.
+- In addition OCGT (open cycle gas turbine) gas power plants offer a supply of 15 MWh at a price 1000 Euro / MWh.
 
 In the existing market design, the marginal OCGT gas power plant would determine the equilibrium price of 1000 Euro / MWh, causing total expenditures of 50*1000 = 50000 Euro for the buyers.
 
