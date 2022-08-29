@@ -44,17 +44,6 @@ which corresponds to a price of 29000 / 50 = 580 Euro / MWh.
 
 This means in this example the price cap reduces buyer expenditures by 42% compared to the current marginal cost pricing system. The money comes from a reduction of the infra-marginal rents of non-gas power plants. 
 
-## UPDATE [2022-09-28 15:00]: RISK OF A MONEY PUMP?
-
-I just got a very good remark on a potentially quite tricky problem (thanks Justus!). 
-
-Under the proposed mechanism, gas power plant owners could buy gas cheaper than the price they get when selling gas. That might possibly provide incentives to buy and sell electricity at the same time in a form of money pump. Below I also suggest that pump storage suppliers should get the same price than gas power plants, i.e. a similar problem would arise for storage owners. Possibly the money pump problem is indeed only an issue for storage owners, since they are physically able to generate demand.
-
-This problem might be quite problematic for this mechanism. But it might not be as bad. I have to think deeper about that issue. 
-
-One always could think of the following modification of the mechanism. Buyers pay the marginal cost as price, i.e. in the example 1000 Euro / MWh, but non-gas plants still get at most the price cap. The extra earnings will be collected by the government that can use the money to support energy users (e.g. lump sum transfers based on historic electricity usage). The mechanism would then not reduce electricity prices but still collect some of the inframarginal rents to have money that is needed to suppport energy consumers.
-
-Possibly, I will update the post later again, with hopefully a better understanding on this issue.
 
 ## Discussion
 
@@ -70,6 +59,10 @@ Let us discuss the key elements and critical issues of this proposal:
 
 - I would treat electricity production from storage (e.g. pump storage or battery storage) like production from gas power plants, i.e. impose no price cap. Storage providers need sufficient price differences and we also want to keep investments incentives for storage at a high level. 
 
+- *UPDATE [2022-08-29 16:45]: RISK OF A MONEY PUMP? With respect to storage, I got a very good remark from Justus Haucap. If pump or battery storage facilities pay as buyers the same price as other buyers and get as sellers the same price as gas power plants, they can get in the same period a higher price for selling than for buying electricity. That might lead to huge manipulation incentives by quickly buying and selling electricity, creating a money pump. Possibly even gas power plant owner could exploit this fact. This problem might be quite problematic for this mechanism. But it might not be as bad. I have to think deeper about that issue.*
+
+- *UPDATE [2022-08-29 16:45]: Related to the point above, one could also think of a variation of the mechanism.  Buyers pay the marginal cost as price, i.e. in the example 1000 Euro / MWh, but non-gas plants still get at most the price cap. The extra earnings will be collected by the government that can use the money to support energy users (e.g. lump sum transfers based on historic electricity usage). The mechanism would then not reduce electricity prices but one would still collect some of the infra-marginal rents to have money that is needed to support energy consumers. While for households lump sum transfers e.g. based on historical consumption are probably even better than lowering prices, it might be more tricky to support firms in another way than by reducing price increases.*
+
 - Note that the mechanism still has substantial price variation between periods, which is important to provide incentives for increased demand flexibility.
 
 - It is true that the lower electricity prices provide smaller incentives to reduce demand. But this is a measure to reduce the burden of possibly 10-20  higher electricity prices than in the past. Also with this measure prices will stay still very high. To induce demand reduction changing old household contracts with low prices to new contracts with high prices (for a compensation) as e.g. suggested [here](https://twitter.com/christianbaye13/status/1560293430697279489) might be much more efficient.
@@ -79,6 +72,8 @@ Let us discuss the key elements and critical issues of this proposal:
 - A second important question is how to make the design compatible with cross-border trades. If only German markets implement a price cap on coal and renewables, coal and renewable producers may tend to export their power while we import gas power at uncapped prices from our neighbors. This might substantially reduce the price reduction from this proposal. So one should (and probably legally has to) coordinate such a mechanism on EU level. In principle, I see that other EU countries like France would benefit from this mechanism in a similar fashion as Germany, so incentives for a coordinated implementation could be there.
 
 - A third main question is whether it is technically & administratively possible to implement such a system sufficiently quickly. While fast implementation is probably tricky, the proposal seems considerably simpler than something like a tax on excessive profits of energy companies that is also discussed in politics.
+
+- *[UPDATE 2022-08-29 16:45] Here is another very important point mentioned to me by Axel Ockenfels who has already thought much more deeply about many issues. One must ensure that non-gas power plants don't circumvent the price cap by selling outside the spot market. While I discussed above exports, we also need to consider over-the-counter trades. Of course, there can be sensible existing contractual obligations like power purchase agreements for renewable plants that we don't want to void. As long as the price of existing agreements does not exceed the price cap, such agreements are probably not problematic. Furthermore, one also has to think about similar price caps in balancing energy market.*
 
 - But what happens with people who already bought electricity futures for 1000 Euro / MWh? Won't they have a problem if now suddenly such a policy measure reduces prices? I guess market participants anticipate the possibility of some policy measures. So they probably won't have bought all their future electricity demand at those prices.
 
