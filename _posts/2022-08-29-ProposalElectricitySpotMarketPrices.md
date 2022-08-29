@@ -44,6 +44,14 @@ which corresponds to a price of 29000 / 50 = 580 Euro / MWh.
 
 This means in this example the price cap reduces buyer expenditures by 42% compared to the current marginal cost pricing system. The money comes from a reduction of the infra-marginal rents of non-gas power plants. 
 
+## UPDATE [2022-09-28 13:30]: RISK OF A MONEY PUMP?
+
+I just got a very good remark on a potentially quite tricky problem (thanks Justus!). Under the proposed mechanism, gas power plant owners could buy gas cheaper than the price they get when selling gas. That might be used as a money pump for owners of gas power plants. (Below I also suggest that pump storage suppliers should get the same price than gas power plants, i.e. a similar problem would arise for storage owners). I have to think deeper about that issue, but it could indeed be very problematic for this mechanism. Possibly, the money pump risk does not allow to implement mechanisms where buyers pay a lower price than the price the marginal seller obtains.
+
+One possibly could think of the following modification of the mechanism. Buyers pay the marginal cost as price, i.e. in the example 1000 Euro / MWh, but non-gas plants still get at most the price cap. The extra earnings will be collected by the government that can use the money to support energy users (e.g. lump sum transfers based on historic electricity usage). The mechanism would then not reduce electricity prices but still collect some of the inframarginal rents to have money that is needed to suppport energy consumers.
+
+I have to think about it more closely. Possibly I will update also other parts of the post later.
+
 ## Discussion
 
 Let us discuss the key elements and critical issues of this proposal:
@@ -56,7 +64,7 @@ Let us discuss the key elements and critical issues of this proposal:
 
 - In principle, one could extend the system by specifying different price caps for different non-gas technologies (coal, lignite, wind, solar, etc.). But my gut feeling is that this is not necessary and not too much would be gained from this additional complexity.
 
-- I would treat electricity production from storage (e.g. pump storage or battery storage) like production from gas power plants, i.e. impose no price cap. Storage providers need sufficient price differences and we also want to keep investments incentives for storage at a high level.
+- I would treat electricity production from storage (e.g. pump storage or battery storage) like production from gas power plants, i.e. impose no price cap. Storage providers need sufficient price differences and we also want to keep investments incentives for storage at a high level. 
 
 - Note that the mechanism still has substantial price variation between periods, which is important to provide incentives for increased demand flexibility.
 
