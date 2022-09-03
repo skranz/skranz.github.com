@@ -65,8 +65,83 @@ Again I lack institutional details to assess how severe the hedging problem actu
 
 So if we are lucky, a simple rule might suffice to ensure that producers with perhaps 95% of market capacity will not get financial troubles when taking away infra-marginal profits and one has to apply more complex procedures only for a small share of companies. Are we lucky? I don't know.
 
+<a id="comment_maurer"></a>
+## [Update 2022-09-03] Assessment from a market expert
+
+I already got valuable feedback. [On twitter](https://twitter.com/maurerchr/status/1565688427382771712) [Christoph Maurer](https://twitter.com/maurerchr) provided [a great link](https://twitter.com/maurerchr/status/1565688427382771712) that provides some data into the hedging practice of RWE. 
+
+In addition, he send me an email with a personal assessment of the problem that I consider very insightful and plausible. He allowed me to share his assessment. Below is first the original version in German, followed by a Deepl translation.
+
+## Einschätzung von Christoph Maurer
+
+Die Lösung/Entschärfung des Hedging-Problems ist meiner Meinung nach eine zwingende Voraussetzung, wenn man eine Lösung „im Strommarkt" finden will (und nicht auf eine „simple" Steuer auf erklärte Gewinne geht).
+
+Deshalb nachfolgend ein paar Punkte, die mir relevant erscheinen.
+
+1. Bei dem Punkt muss man sehr deutlich zwischen EE und konventionellen Kraftwerken unterscheiden.
+
+    1. EE sind im Moment vermutlich die mit den höchsten Renten, weil sie überwiegend spotvermarktet sind.
+
+        1. EE im Fördersystem der gleitenden Marktprämie (ab 100 kW aufwärts sind das die allermeisten Anlagen) sind in der Vergangenheit fast ausschließlich am Spotmarkt vermarktet worden, weil das die risikolose Vermarktungsform war (Prämienzahlung hat Differenz zum durchschnittlichen Spotmarktwert erstattet).
+    
+        2. Allerdings könnte sich das in den letzten Monaten geändert haben. Wenn die erwartete Prämienzahlung 0 ist, spielt das keine Rolle mehr. Dennoch haben EE keinen vollen Hedge gegen die Standardterminmarktprodukte Base und Peak, was Spotvermarktung attraktiver macht.
+    
+        3. PPAs sind m. E. nicht das große Problem. Das sind in der Regel sehr langfristige Verträge, die eher auf Basis von Durchschnittskosten + Marge abgeschlossen werden.
+
+    2. Bei konventionellen Kraftwerken ist das Problem hingegen riesig, weil insbesondere die von variablen Kosten günstigen Kraftwerke fast vollständig auf Termin vermarktet werden. Das sind aber auch die, wo es evtl. Renten gibt.
+
+        1. Pressemeldungen deuten aber darauf hin, dass dort aktuell noch keine besonders hohen Renten anfallen, weil Vermarktung noch vor Krise erfolgte.
+    
+        2. Allerdings könnte sich das im Laufe der Krise ändern. Aktuell verkaufen die durch die Anlagen abgesicherte, sehr teure Terminkontrakte. Wenn die zur Erfüllung gelangen, werden sehr hohe Renten anfallen.
+    
+        3. Problem kann dabei sein, dass zu diesem Zeitpunkt die Krise auf dem Spot längst vorbei ist. Die Anlagen speisen im Extremfall sogar gar nicht ein. Dennoch verdienen die Betreiber aus den Futuresgeschäften.
+    
+        4. Wenn man hier Fehler macht, kann man Unternehmen potenziell in die Insolvenz treiben.
+
+2. Struktur des Terminmarktes macht es vermutlich sehr schwer, Lösungen zu finden.
+
+    1. Kontrakte sind nicht anlagenscharf.
+  
+    2. Typischerweise werden Terminpositionen mehrfach geöffnet und geschlossen (das Handelsvolumen am deutschen Terminmarkt für ein Erfüllungsjahr beträgt ein Mehrfaches des Stromverbrauchs).
+  
+## Deepl Translation of Christoph Maurer's Assessment
+
+Solving the hedging problem is, in my opinion, a mandatory requirement if one wants to find a solution "in the electricity market" (and not go for a "simple" tax on declared profits).
+
+Therefore, below are a few points that seem relevant to me.
+
+1. on this point, one has to distinguish very clearly between RE and conventional power plants.
+
+    1. RES are probably the ones with the highest rents at the moment, because they are mostly spot-marketed.
+
+        1. renewable energies in the support system of the sliding market premium (from 100 kW upwards, these are the vast majority of plants) have been marketed almost exclusively on the spot market in the past, because this was the risk-free form of marketing (premium payment reimbursed the difference to the average spot market value).
+    
+         2. However, this may have changed in recent months. If the expected premium payment is 0, it no longer matters. Nevertheless, RE does not have a full hedge against the standard forward market products Base and Peak, which makes spot marketing more attractive.
+    
+        3. PPAs are not the big problem in my opinion. These are usually very long term contracts that tend to be based on average cost + margin.
+
+    2. For conventional power plants, on the other hand, the problem is huge, because especially the power plants that are favorable from variable costs are almost completely marketed forward. But these are also the ones where there might be annuities.
+
+        1. press reports indicate, however, that there are currently no particularly high annuities, because marketing took place before the crisis.
+        2. however, this could change in the course of the crisis. Currently, they are selling very expensive forward contracts hedged by the assets. When they are fulfilled, very high pensions will accrue.
+        
+        3. problem may be that by that time the crisis on the spot will be long over. In extreme cases, the plants may not even feed in at all. Nevertheless, the operators earn from the futures transactions.
+        
+        4. making mistakes here can potentially drive companies into insolvency.
+
+2. structure of the futures market probably makes it very difficult to find solutions.
+
+    1. contracts are not asset specific.
+  
+    2. forward positions are typically opened and closed several times (the trading volume on the German forward market for a fulfillment year is several times the electricity consumption).
+
+
 ## Feedback
 
 Given my limited knowledge of institutional details, I would appreciate feedback very much. In particular, if you the know the reality of electricity markets much better than me and have suggestions please don't hesitate to send me an email. I try to update the post regularly if I get relevant new insights over time.
+
+
+
+
 
 Author: Sebastian Kranz, Ulm University
