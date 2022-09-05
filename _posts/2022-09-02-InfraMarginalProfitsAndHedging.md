@@ -45,7 +45,11 @@ I don't know how prevalent this case is, but unless it is a very rare exception 
 
 I guess the core idea would be that for hedged electricity producers one must determine the "actual price" at which they sell electricity, taking into account future and forward positions. 
 
-That may be a very tricky task as there may be different instruments for hedging (cash settled futures, forward contracts with physical delivery, options (?), or more complex contractual structures). Also hedging probably does not take place at the level of a single power plant but at the level of a firm which may have different types of power plants. So one probably needs some rule of how company wide hedging positions are boiled down to "actual prices" that the different producing plants receive.
+That may be a very tricky task as there may be different instruments for hedging (cash settled futures, forward contracts with physical delivery, options (?), or more complex contractual structures). Also hedging probably does not take place at the level of a single power plant but at the level of a firm which may have different types of power plants. 
+
+*[UPDATE 2022-09-05] Note that many electricity producers probably also have fixed price contracts with retail consumers. Indeed, some firms (e.g. "Stadtwerke") may mainly have retail contracts but squired power plants or shares in power plants as a hedge to reduce their exposure to wholesale prices. Such retail commitments probably should be treated similar to hedging in future or forward markets.*
+
+So one probably needs some rule of how company wide hedging positions are boiled down to "actual prices" that the different producing plants receive.
 
 OK, assume we have such a rule that maps hedging positions into prices for power plants. Now firms might have strong incentives to exploit that rule in order to reduce their tax burden. And history shows that firms can be quite creative in inventing schemes that reduce tax payments.
 
